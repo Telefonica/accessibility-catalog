@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
 }
 
 android {
@@ -54,12 +56,23 @@ dependencies {
     implementation libs.ui.main
     implementation libs.ui.tooling.preview
     implementation libs.androidx.material3
+    implementation libs.hilt.android
+    implementation libs.mistica
+    implementation libs.androidx.navigation.compose
+
     testImplementation libs.junit
+
     androidTestImplementation libs.androidx.junit
     androidTestImplementation libs.androidx.espresso.core
     androidTestImplementation libs.ui.test.junit4
+
     debugImplementation libs.ui.tooling.main
     debugImplementation libs.androidx.ui.test.manifest
 
-    implementation libs.mistica
+    kapt libs.hilt.compiler
+}
+
+// Allow references to generated code
+kapt {
+    correctErrorTypes true
 }
