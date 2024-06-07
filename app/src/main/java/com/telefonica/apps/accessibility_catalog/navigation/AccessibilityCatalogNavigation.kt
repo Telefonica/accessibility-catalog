@@ -5,6 +5,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.telefonica.apps.accessibility_catalog.dashboard.Dashboard
 import com.telefonica.apps.accessibility_catalog.navigation.AccessibilityCatalogScreen.*
 
 enum class AccessibilityCatalogScreen() {
@@ -23,7 +24,7 @@ fun AccessibilityCatalogNavHost(
         startDestination = DASHBOARD.name,
     ) {
         composable(DASHBOARD.name) {
-            // todo. Start dashboard screen from here
+            Dashboard()
         }
     }
 }
