@@ -11,6 +11,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -21,8 +24,11 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.telefonica.apps.accessibility_catalog.R
+import com.telefonica.mistica.compose.list.ListRowIcon
+import com.telefonica.mistica.compose.list.ListRowItem
 import com.telefonica.mistica.compose.theme.MisticaTheme
 
+@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun Dashboard(modifier: Modifier = Modifier) {
     Column(modifier = modifier.fillMaxSize()) {
@@ -50,6 +56,15 @@ fun Dashboard(modifier: Modifier = Modifier) {
                 )
             }
         }
+        Spacer(modifier = Modifier.size(8.dp))
+        Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
+            ListRowItem(
+                listRowIcon = ListRowIcon.NormalIcon(
+                    painter = painterResource(id = R.drawable.ic_buttons),
+                    tint = Color.Unspecified,
+                ),
+                title = "Actions",
+            )
+        }
     }
 }
-
