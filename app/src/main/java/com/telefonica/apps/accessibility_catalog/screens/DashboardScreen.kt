@@ -1,4 +1,4 @@
-package com.telefonica.apps.accessibility_catalog.dashboard
+package com.telefonica.apps.accessibility_catalog.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -30,7 +30,7 @@ import com.telefonica.mistica.compose.shape.Chevron
 import com.telefonica.mistica.compose.theme.MisticaTheme
 
 @Composable
-fun Dashboard(
+fun DashboardScreen(
     modifier: Modifier = Modifier,
     navigateToDetail: () -> Unit,
     ) {
