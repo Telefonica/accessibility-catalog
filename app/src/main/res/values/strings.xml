@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Accessibility catalog</string>
+    <string name="app_name">Catálgo de accesibilidad</string>
     
     <!-- Sections -->
     <string name="abstract_section">General</string>
@@ -15,9 +15,12 @@
 
     <string name="buttons_requirement_touch_target">El elemento debe tener un área clicable mínima de 48x48dp.</string>
     <string name="buttons_requirement_space_between">Los elementos clicables deben tener una separación mínima de 8dp entre ellos.</string>
-    <string name="buttons_requirement_custom_announcement">El elemento clicable puede anunciar una texto personalizado que indique el efecto de la acción.\nPor ejemplo: \'Toca dos veces para [ guardar | abrir | cerrar | … ]\'.</string>
+    <string name="buttons_requirement_custom_announcement">El elemento clicable puede anunciar un texto personalizado que indique el efecto de la acción.\nPor ejemplo: \'Toca dos veces para [ guardar | abrir | cerrar | … ]\'.</string>
 
     <!-- Headings -->
     <string name="headings_title_section">Encabezados</string>
+
+    <!-- Accessibility strings -->
+    <string name="accessibility_back_button">Volver atrás</string>
 
 </resources>

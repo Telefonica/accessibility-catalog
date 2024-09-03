@@ -41,10 +41,10 @@ fun DetailScreen(
         topBar = {
             TopAppBar(
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = MisticaTheme.colors.brandLow),
-                title = { Title(text = "Actions in XML", style = TitleStyle.TITLE_2) },
+                title = { Title(text = "Áreas clicables", style = TitleStyle.TITLE_2) }, // todo dynamic title
                 navigationIcon = {
                     IconButton(onClick = onBackPressed) {
-                        Icon(imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Volver atrás")
+                        Icon(imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(id = R.string.accessibility_back_button))
                     }
                 }
             )

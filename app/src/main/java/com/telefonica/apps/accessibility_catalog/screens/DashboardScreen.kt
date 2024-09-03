@@ -54,9 +54,9 @@ fun DashboardScreen(
                     modifier = Modifier
                         .weight(1f)
                         .align(Alignment.CenterVertically),
-                    text = "Accessibility catalog",
+                    text = stringResource(id = R.string.app_name),
                     style = MisticaTheme.typography.presetTitle1.copy(lineHeight = TextUnit.Unspecified),
-                    fontSize = 28.sp,
+                    fontSize = 26.sp,
                 )
             }
         }
