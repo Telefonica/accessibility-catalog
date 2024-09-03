@@ -20,6 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -33,7 +34,7 @@ import com.telefonica.mistica.compose.theme.MisticaTheme
 fun DashboardScreen(
     modifier: Modifier = Modifier,
     navigateToDetail: () -> Unit,
-    ) {
+) {
     Column(modifier = modifier.fillMaxSize()) {
         Box(modifier = Modifier.background(MisticaTheme.colors.brandLow)) {
             Row(
@@ -66,7 +67,7 @@ fun DashboardScreen(
                     painter = painterResource(id = R.drawable.ic_actions),
                     tint = Color.Unspecified,
                 ),
-                title = "Actions",
+                title = stringResource(id = R.string.buttons_title_section),
                 trailing = { Chevron() },
                 onClick = navigateToDetail,
             )
@@ -76,7 +77,7 @@ fun DashboardScreen(
                     painter = painterResource(id = R.drawable.ic_actions),
                     tint = Color.Unspecified,
                 ),
-                title = "Headings",
+                title = stringResource(id = R.string.headings_title_section),
                 trailing = { Chevron() },
                 onClick = navigateToDetail,
             )
