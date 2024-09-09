@@ -67,7 +67,7 @@ fun DashboardScreen(
                     painter = painterResource(id = R.drawable.ic_actions),
                     tint = Color.Unspecified,
                 ),
-                title = stringResource(id = R.string.buttons_title_section),
+                title = stringResource(id = R.string.touch_target_title_section),
                 trailing = { Chevron() },
                 onClick = navigateToDetail,
             )
