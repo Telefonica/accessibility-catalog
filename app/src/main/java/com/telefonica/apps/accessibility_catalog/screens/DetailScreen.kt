@@ -1,8 +1,12 @@
 package com.telefonica.apps.accessibility_catalog.screens
 
+import android.widget.ImageButton
+import android.widget.Toast
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
@@ -16,14 +20,17 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import com.telefonica.apps.accessibility_catalog.R
 import com.telefonica.apps.accessibility_catalog.screens.common.AbstractSection
 import com.telefonica.apps.accessibility_catalog.screens.common.RelatedLink
 import com.telefonica.apps.accessibility_catalog.screens.common.RelatedLinksSection
 import com.telefonica.apps.accessibility_catalog.screens.common.RequirementsSection
+import com.telefonica.mistica.compose.button.Button
 import com.telefonica.mistica.compose.theme.MisticaTheme
 import com.telefonica.mistica.compose.title.Title
 import com.telefonica.mistica.compose.title.TitleStyle
@@ -50,11 +57,15 @@ fun DetailScreen(
         Box(
             modifier = modifier
                 .padding(insets)
-                .verticalScroll(rememberScrollState())
+                .fillMaxSize()
         ) {
             Column(
-                modifier = Modifier.padding(all = 16.dp),
+                modifier = Modifier
+                    .padding(horizontal = 16.dp)
+                    .verticalScroll(rememberScrollState()),
             ) {
+                Spacer(modifier = Modifier.height(16.dp))
+
                 AbstractSection(content = stringResource(id = R.string.touch_target_intro))
 
                 Spacer(modifier = Modifier.height(20.dp))
@@ -85,7 +96,18 @@ fun DetailScreen(
                         ),
                     )
                 )
+
+                Spacer(modifier = Modifier.height(80.dp))
             }
+            Button(
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .padding(bottom = 16.dp),
+                text = stringResource(id = R.string.implementation_button_text),
+                onClickListener = {
+
+                }
+            )
         }
     }
 }
