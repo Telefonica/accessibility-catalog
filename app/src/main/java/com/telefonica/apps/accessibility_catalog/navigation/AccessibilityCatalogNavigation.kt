@@ -9,17 +9,16 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.telefonica.apps.accessibility_catalog.navigation.AccessibilityCatalogScreen.DASHBOARD
-import com.telefonica.apps.accessibility_catalog.navigation.AccessibilityCatalogScreen.DETAIL_CLASSIC
+import com.telefonica.apps.accessibility_catalog.navigation.AccessibilityCatalogScreen.DETAIL
 import com.telefonica.apps.accessibility_catalog.screens.DashboardScreen
 import com.telefonica.apps.accessibility_catalog.screens.DetailScreen
-
 
 enum class AccessibilityCatalogScreen {
     ON_BOARDING,
     DASHBOARD,
-    DETAIL_CLASSIC,
-    DETAIL_COMPOSE,
-    HELP
+    DETAIL,
+    IMPLEMENTATION,
+    HELP,
 }
 
 @Composable
@@ -40,7 +39,7 @@ fun AccessibilityCatalogNavHost(
                 navigateToDetail = actions.navigateToDetail
             )
         }
-        composable(DETAIL_CLASSIC.name) {
+        composable(DETAIL.name) {
             DetailScreen(
                 onBackPressed = actions.backPress
             )
@@ -53,7 +52,7 @@ fun AccessibilityCatalogNavHost(
  */
 class MainActions(navController: NavHostController) {
     val navigateToDetail: () -> Unit = {
-        navController.navigate(DETAIL_CLASSIC.name)
+        navController.navigate(DETAIL.name)
     }
     val backPress: () -> Unit = {
         navController.navigateUp()

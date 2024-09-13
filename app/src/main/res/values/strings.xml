@@ -1,6 +1,6 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="es">
     <string name="app_name">Catálgo de accesibilidad</string>
-    
+
     <!-- Sections -->
     <string name="abstract_section_title">General</string>
     <string name="requirements_section_title">Requisitos</string>
@@ -17,12 +17,20 @@
     <string name="touch_target_requirement_space_between">Los elementos clicables deben tener una separación mínima de 8dp entre ellos.</string>
     <string name="touch_target_requirement_custom_announcement">El elemento clicable puede anunciar un texto personalizado que indique el efecto de la acción.\nPor ejemplo: \'Toca dos veces para [ guardar | abrir | cerrar | … ]\'.</string>
 
-    <string name="tocuh_target_related_link_1" translatable="false">https://support.google.com/accessibility/android/answer/7101858</string>
+    <string name="touch_target_related_link_1_name">Documentación Android</string>
+    <string name="touch_target_related_link_1" translatable="false">https://support.google.com/accessibility/android/answer/7101858</string>
+
+    <string name="touch_target_related_link_2_name">Material Design</string>
+    <string name="touch_target_related_link_2" translatable="false">https://m2.material.io/design/layout/spacing-methods.html#touch-targets</string>
+
+    <string name="touch_target_related_link_3_name">Magenta</string>
+    <string name="touch_target_related_link_3" translatable="false">https://www.magentaa11y.com/checklist-native/button</string>
 
     <!-- Headings -->
     <string name="headings_title_section">Encabezados</string>
 
     <!-- Accessibility strings -->
     <string name="accessibility_back_button">Volver atrás</string>
+    <string name="accessibility_go_to_website_label">ir al sitio web</string>
 
 </resources>
