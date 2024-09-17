@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
@@ -56,47 +57,51 @@ fun DetailScreen(
                 .fillMaxSize()
         ) {
             Column(
-                modifier = Modifier
-                    .padding(horizontal = 16.dp)
-                    .verticalScroll(rememberScrollState()),
+                modifier = Modifier.verticalScroll(rememberScrollState())
             ) {
-                Spacer(modifier = Modifier.height(16.dp))
+                Column(
+                    modifier = Modifier.padding(horizontal = 16.dp)
+                ) {
 
-                AbstractSection(content = stringResource(id = R.string.touch_target_intro))
+                    Spacer(modifier = Modifier.height(16.dp))
 
-                Spacer(modifier = Modifier.height(20.dp))
+                    AbstractSection(content = stringResource(id = R.string.touch_target_intro))
 
-                RequirementsSection(
-                    requirements = listOf(
-                        stringResource(id = R.string.touch_target_requirement_touch_target),
-                        stringResource(id = R.string.touch_target_requirement_space_between),
-                        stringResource(id = R.string.touch_target_requirement_custom_announcement),
+                    Spacer(modifier = Modifier.height(20.dp))
+
+                    RequirementsSection(
+                        requirements = listOf(
+                            stringResource(id = R.string.touch_target_requirement_touch_target),
+                            stringResource(id = R.string.touch_target_requirement_space_between),
+                            stringResource(id = R.string.touch_target_requirement_custom_announcement),
+                        )
                     )
-                )
 
-                Spacer(modifier = Modifier.height(20.dp))
+                    Spacer(modifier = Modifier.height(20.dp))
 
-                RelatedLinksSection(
-                    relatedLinks = listOf(
-                        RelatedLink(
-                            url = stringResource(id = R.string.touch_target_related_link_1),
-                            name = stringResource(id = R.string.touch_target_related_link_1_name)
-                        ),
-                        RelatedLink(
-                            url = stringResource(id = R.string.touch_target_related_link_2),
-                            name = stringResource(id = R.string.touch_target_related_link_2_name)
-                        ),
-                        RelatedLink(
-                            url = stringResource(id = R.string.touch_target_related_link_3),
-                            name = stringResource(id = R.string.touch_target_related_link_3_name)
-                        ),
+                    RelatedLinksSection(
+                        relatedLinks = listOf(
+                            RelatedLink(
+                                url = stringResource(id = R.string.touch_target_related_link_1),
+                                name = stringResource(id = R.string.touch_target_related_link_1_name)
+                            ),
+                            RelatedLink(
+                                url = stringResource(id = R.string.touch_target_related_link_2),
+                                name = stringResource(id = R.string.touch_target_related_link_2_name)
+                            ),
+                            RelatedLink(
+                                url = stringResource(id = R.string.touch_target_related_link_3),
+                                name = stringResource(id = R.string.touch_target_related_link_3_name)
+                            ),
+                        )
                     )
-                )
 
-                Spacer(modifier = Modifier.height(80.dp))
+                    Spacer(modifier = Modifier.height(80.dp))
+                }
             }
             Button(
                 modifier = Modifier
+                    .fillMaxWidth(0.75f)
                     .align(Alignment.BottomCenter)
                     .padding(bottom = 16.dp),
                 text = stringResource(id = R.string.implementation_button_text),
