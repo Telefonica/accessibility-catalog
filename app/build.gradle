@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'com.google.dagger.hilt.android'
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
@@ -38,9 +39,6 @@ android {
     buildFeatures {
         compose true
     }
-    composeOptions {
-        kotlinCompilerExtensionVersion '1.5.10'
-    }
     packagingOptions {
         resources {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
@@ -68,6 +66,9 @@ dependencies {
 
     debugImplementation libs.ui.tooling.main
     debugImplementation libs.androidx.ui.test.manifest
+
+    implementation libs.dagger
+    kapt libs.dagger.compiler
 
     kapt libs.hilt.compiler
 }

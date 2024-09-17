@@ -1,4 +1,4 @@
-package com.telefonica.apps.accessibility_catalog.screens.common
+package com.telefonica.apps.accessibility_catalog.view.screens.common
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height

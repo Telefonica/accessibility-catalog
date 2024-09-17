@@ -1,4 +1,4 @@
-package com.telefonica.apps.accessibility_catalog.screens
+package com.telefonica.apps.accessibility_catalog.view.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background

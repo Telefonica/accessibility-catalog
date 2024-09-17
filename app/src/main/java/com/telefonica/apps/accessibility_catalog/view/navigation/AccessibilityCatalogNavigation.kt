@@ -1,4 +1,4 @@
-package com.telefonica.apps.accessibility_catalog.navigation
+package com.telefonica.apps.accessibility_catalog.view.navigation
 
 import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.core.tween
@@ -8,10 +8,10 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.telefonica.apps.accessibility_catalog.navigation.AccessibilityCatalogScreen.DASHBOARD
-import com.telefonica.apps.accessibility_catalog.navigation.AccessibilityCatalogScreen.DETAIL
-import com.telefonica.apps.accessibility_catalog.screens.DashboardScreen
-import com.telefonica.apps.accessibility_catalog.screens.DetailScreen
+import com.telefonica.apps.accessibility_catalog.view.navigation.AccessibilityCatalogScreen.DASHBOARD
+import com.telefonica.apps.accessibility_catalog.view.navigation.AccessibilityCatalogScreen.DETAIL
+import com.telefonica.apps.accessibility_catalog.view.screens.DashboardScreen
+import com.telefonica.apps.accessibility_catalog.view.screens.DetailScreen
 
 enum class AccessibilityCatalogScreen {
     ON_BOARDING,
