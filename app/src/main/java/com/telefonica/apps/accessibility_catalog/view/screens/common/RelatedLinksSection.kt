@@ -16,6 +16,7 @@ import androidx.compose.ui.text.withLink
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.telefonica.apps.accessibility_catalog.R
+import com.telefonica.apps.accessibility_catalog.view.models.RelatedLink
 import com.telefonica.mistica.compose.theme.MisticaTheme
 import com.telefonica.mistica.compose.title.Title
 import com.telefonica.mistica.compose.title.TitleStyle
@@ -46,15 +47,10 @@ fun RelatedLinksSection(
                     val url = (linkAnnotation as LinkAnnotation.Url).url
                     uriHandler.openUri(url)
                 }
-                withLink(link) { append(relatedLink.name) }
+                withLink(link) { append(stringResource(id = relatedLink.nameResId)) }
             },
             style = MisticaTheme.typography.presetLink,
             fontSize = 16.sp,
         )
     }
 }
-
-data class RelatedLink(
-    val url: String,
-    val name: String,
-)

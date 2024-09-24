@@ -23,18 +23,20 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.telefonica.apps.accessibility_catalog.R
+import com.telefonica.apps.accessibility_catalog.view.models.RelatedLink
 import com.telefonica.apps.accessibility_catalog.view.screens.common.AbstractSection
-import com.telefonica.apps.accessibility_catalog.view.screens.common.RelatedLink
 import com.telefonica.apps.accessibility_catalog.view.screens.common.RelatedLinksSection
 import com.telefonica.apps.accessibility_catalog.view.screens.common.RequirementsSection
 import com.telefonica.mistica.compose.button.Button
 import com.telefonica.mistica.compose.theme.MisticaTheme
 import com.telefonica.mistica.compose.title.Title
 import com.telefonica.mistica.compose.title.TitleStyle
+import java.util.UUID
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DetailScreen(
+    elementId: UUID,
     modifier: Modifier = Modifier,
     onBackPressed: () -> Unit,
 ) {
@@ -65,7 +67,7 @@ fun DetailScreen(
 
                     Spacer(modifier = Modifier.height(16.dp))
 
-                    AbstractSection(content = stringResource(id = R.string.touch_target_intro))
+                    AbstractSection(content = stringResource(id = R.string.touch_target_abstract))
 
                     Spacer(modifier = Modifier.height(20.dp))
 
@@ -83,15 +85,15 @@ fun DetailScreen(
                         relatedLinks = listOf(
                             RelatedLink(
                                 url = stringResource(id = R.string.touch_target_related_link_1),
-                                name = stringResource(id = R.string.touch_target_related_link_1_name)
+                                nameResId = R.string.touch_target_related_link_1_name
                             ),
                             RelatedLink(
                                 url = stringResource(id = R.string.touch_target_related_link_2),
-                                name = stringResource(id = R.string.touch_target_related_link_2_name)
+                                nameResId = R.string.touch_target_related_link_2_name
                             ),
                             RelatedLink(
                                 url = stringResource(id = R.string.touch_target_related_link_3),
-                                name = stringResource(id = R.string.touch_target_related_link_3_name)
+                                nameResId = R.string.touch_target_related_link_3_name
                             ),
                         )
                     )

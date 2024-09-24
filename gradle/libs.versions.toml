@@ -5,6 +5,7 @@ core-ktx = "1.12.0"
 dagger = "2.52"
 espresso-core = "3.5.1"
 hilt-android = "2.50"
+hilt-navigation-compose = "1.2.0"
 junit = "4.13.2"
 lifecycle-runtime-ktx = "2.7.0"
 material3 = "1.2.0"
@@ -26,6 +27,7 @@ dagger = { module = "com.google.dagger:dagger", version.ref = "dagger" }
 dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt-android" }
 hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt-android" }
+hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hilt-navigation-compose" }
 junit = { module = "junit:junit", version.ref = "junit" }
 mistica = { module = "com.telefonica:mistica", version.ref = "mistica" }
 ui-main = { module = "androidx.compose.ui:ui", version.ref = "compose-version" }

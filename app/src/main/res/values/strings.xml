@@ -12,7 +12,7 @@
 
     <!-- Touch target -->
     <string name="touch_target_title_section">Áreas clicables</string>
-    <string name="touch_target_intro">Dentro de una aplicación encontramos pantallas que ofrecen elementos clicables sobre los que el usuario puede interactuar.
+    <string name="touch_target_abstract">Dentro de una aplicación encontramos pantallas que ofrecen elementos clicables sobre los que el usuario puede interactuar.
         \n\nEstas áreas clicables las podemos identificar en los diferentes componentes de una pantalla como pueden ser botones, tarjetas, pestañas, casillas de verificación, etc.
         \n\nTodos estos elementos de una pantalla deben tener los requisitos mínimos de accesibilidad a nivel de desarrollo que se definen a continuación.</string>
 
