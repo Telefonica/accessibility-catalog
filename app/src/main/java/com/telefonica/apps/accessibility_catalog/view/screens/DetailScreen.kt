@@ -43,7 +43,7 @@ fun DetailScreen(
     modifier: Modifier = Modifier,
     viewModel: DetailViewModel = hiltViewModel(),
     onBackPressed: () -> Unit,
-    onImplementationClick: () -> Unit,
+    onImplementationClick: (UUID) -> Unit,
 ) {
     val detailState = viewModel.state.collectAsState()
 
@@ -98,7 +98,9 @@ fun DetailScreen(
                         .align(Alignment.BottomCenter)
                         .padding(bottom = 16.dp),
                     text = stringResource(id = R.string.implementation_text),
-                    onClickListener = onImplementationClick
+                    onClickListener = {
+                        onImplementationClick(elementDetail.id)
+                    }
                 )
             }
         }

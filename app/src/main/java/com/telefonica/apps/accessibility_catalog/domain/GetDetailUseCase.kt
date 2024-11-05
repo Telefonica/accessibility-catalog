@@ -5,9 +5,9 @@ import com.telefonica.apps.accessibility_catalog.view.models.AccessibilityDetail
 import java.util.UUID
 import javax.inject.Inject
 
-class GetAccessibilityDetailUseCase @Inject constructor(
+class GetDetailUseCase @Inject constructor(
     private val accessibilityCatalogRepository: AccessibilityCatalogRepository,
 ) {
 
-    operator fun invoke(elementId: UUID) : AccessibilityDetail = accessibilityCatalogRepository.getAccessibilityDetail(elementId)
+    operator fun invoke(elementId: UUID) : AccessibilityDetail? = accessibilityCatalogRepository.getAccessibilityDetail(elementId)
 }

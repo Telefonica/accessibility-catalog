@@ -2,13 +2,9 @@ package com.telefonica.apps.accessibility_catalog.view.navigation
 
 import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.core.tween
-import androidx.compose.animation.scaleIn
 import androidx.compose.animation.slideInVertically
-import androidx.compose.animation.slideOut
 import androidx.compose.animation.slideOutVertically
-import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
@@ -34,7 +30,13 @@ object Detail : AccessibilityCatalogDestination(simpleRoute = "detail") {
     )
 }
 
-object Implementation : AccessibilityCatalogDestination(simpleRoute = "detail")
+object Implementation : AccessibilityCatalogDestination(simpleRoute = "implementation") {
+    val routeWithArg = "${simpleRoute}/{${ID_ARGUMENT}}"
+    val arguments = listOf(
+        navArgument(ID_ARGUMENT) { type = NavType.StringType }
+    )
+}
+
 object Help : AccessibilityCatalogDestination(simpleRoute = "help")
 
 @Composable
@@ -51,8 +53,8 @@ fun AccessibilityCatalogNavHost(
     ) {
         composable(Dashboard.simpleRoute) {
             DashboardScreen(
-                navigateToDetail = { id ->
-                    navController.navigateSingleTopToWithIdArgument(Detail.simpleRoute, id.toString())
+                navigateToDetail = { elementId ->
+                    navController.navigateSingleTopToWithIdArgument(Detail.simpleRoute, elementId.toString())
                 }
             )
         }
@@ -65,20 +67,24 @@ fun AccessibilityCatalogNavHost(
             DetailScreen(
                 elementId = UUID.fromString(idArgument),
                 onBackPressed = { navController.navigateUp() },
-                onImplementationClick = {
-                    navController.navigateSingleTopTo(Implementation.simpleRoute)
+                onImplementationClick = { elementId ->
+                    navController.navigateSingleTopToWithIdArgument(Implementation.simpleRoute, elementId.toString())
                 }
             )
         }
 
         composable(
-            route = Implementation.simpleRoute,
+            route = Implementation.routeWithArg,
+            arguments = Implementation.arguments,
             enterTransition = { slideInVertically(initialOffsetY = { 1800 }) },
             exitTransition = { slideOutVertically(targetOffsetY = { 1800 }) },
-        ) {
+        ) { navBackStackEntry ->
+            val idArgument = navBackStackEntry.arguments?.getString(ID_ARGUMENT)
             ImplementationScreen(
-                onCloseClick = {
-                    navController.navigateSingleTopTo(Dashboard.simpleRoute)
+                elementId = UUID.fromString(idArgument),
+                onCloseClick = { elementId ->
+                    //todo check nav flow -> navController.navigateUp()
+                    navController.navigateSingleTopToWithIdArgument(Detail.simpleRoute, elementId.toString())
                 }
             )
         }

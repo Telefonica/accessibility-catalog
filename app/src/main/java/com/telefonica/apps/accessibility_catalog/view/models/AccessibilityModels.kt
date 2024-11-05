@@ -10,8 +10,8 @@ data class AccessibilityElement(
     @StringRes val abstractResId: Int,
     val requirementsResId: List<Int> = emptyList(),
     val relatedLinksResId: List<RelatedLink> = emptyList(),
-    val xmlViewImplementation: @Composable () -> Unit = {}, // todo - remove default value
-    val composeImplementation: @Composable () -> Unit = {}, // todo - remove default value
+    val xmlViewImplementation: (@Composable () -> Unit)?,
+    val composeImplementation: (@Composable () -> Unit)?,
 )
 
 data class DashboardElement(
@@ -28,8 +28,8 @@ data class AccessibilityDetail(
 )
 
 data class AccessibilityImplementation(
-    val xmlViewImplementation: @Composable () -> Unit,
-    val composeImplementation: @Composable () -> Unit,
+    val xmlViewImplementation: (@Composable () -> Unit)?,
+    val composeImplementation: (@Composable () -> Unit)?,
 )
 
 data class RelatedLink(
