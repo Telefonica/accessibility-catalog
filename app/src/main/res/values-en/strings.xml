@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Accessibility catalog</string>
+
+    <!-- Common -->
+    <string name="implementation_text">Implementation</string>
+    <string name="xml_views_implementation_title">XML Views</string>
+
+    <!-- Sections -->
+    <string name="abstract_section_title">Abstract</string>
+    <string name="requirements_section_title">Requirements</string>
+    <string name="related_links_title">Related links</string>
+    <string name="xml_implementation_section_title">Implementation</string>
+
+    <!-- Touch target -->
+    <string name="touch_target_title_section">Touch target</string>
+    <string name="touch_target_abstract">Within an application, we find screens that offer clickable elements with which the user can interact.
+        \n\nThese clickable areas can be identified in the different components of a screen, such as buttons, cards, tabs, checkboxes, etc.
+        \n\nAll these elements of a screen must have the minimum accessibility requirements at the development level defined below.</string>
+
+    <string name="touch_target_requirement_touch_target">The element must have a minimum clickable area of 48x48dp.</string>
+    <string name="touch_target_requirement_space_between">Clickable elements must be at least 8dp apart.</string>
+    <string name="touch_target_requirement_custom_announcement">The clickable element can announce a custom text indicating the effect of the action.\nFor example: \'Double tap to [ save | open | close | … ]\'.</string>
+
+    <string name="touch_target_related_link_1_name">Android documentation</string>
+
+    <!-- Headings -->
+    <string name="headings_title_section">Headings</string>
+
+    <!-- Toggleables -->
+    <string name="toggleables_title_section">Toggleables</string>
+
+    <string name="toggleables_implementation_android_switch_text">Android Switch component</string>
+    <string name="toggleables_implementation_custom_title">Customize Ads</string>
+    <string name="toggleables_implementation_custom_subtitle">Improve your advertising relevance</string>
+
+    <!-- Accessibility strings -->
+    <string name="accessibility_back_button">Back</string>
+    <string name="accessibility_go_to_website_label">go to website</string>
+    <string name="accessibility_close_button">Close</string>
+    <string name="accessibility_switch_toggle_action">toggle</string>
+    <string name="accessibility_checkbox_turn_on_action">turn on</string>
+    <string name="accessibility_checkbox_turn_off_action">turn off</string>
+    
+</resources>

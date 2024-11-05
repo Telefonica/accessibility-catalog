@@ -1,3 +1,52 @@
-<resources>
-    <string name="app_name">Accessibility catalog</string>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="es">
+    <string name="app_name">Catálgo de accesibilidad</string>
+
+    <!-- Common -->
+    <string name="implementation_text">Implementación</string>
+    <string name="xml_views_implementation_title">Vistas en XML</string>
+    <string name="compose_implementation_title" translatable="false">Compose</string>
+
+    <!-- Sections -->
+    <string name="abstract_section_title">General</string>
+    <string name="requirements_section_title">Requisitos</string>
+    <string name="related_links_title">Enlaces relacionados</string>
+    <string name="xml_implementation_section_title">Implementación</string>
+
+    <!-- Touch target -->
+    <string name="touch_target_title_section">Áreas clicables</string>
+    <string name="touch_target_abstract">Dentro de una aplicación encontramos pantallas que ofrecen elementos clicables sobre los que el usuario puede interactuar.
+        \n\nEstas áreas clicables las podemos identificar en los diferentes componentes de una pantalla como pueden ser botones, tarjetas, pestañas, casillas de verificación, etc.
+        \n\nTodos estos elementos de una pantalla deben tener los requisitos mínimos de accesibilidad a nivel de desarrollo que se definen a continuación.</string>
+
+    <string name="touch_target_requirement_touch_target">El elemento debe tener un área clicable mínima de 48x48dp.</string>
+    <string name="touch_target_requirement_space_between">Los elementos clicables deben tener una separación mínima de 8dp entre ellos.</string>
+    <string name="touch_target_requirement_custom_announcement">El elemento clicable puede anunciar un texto personalizado que indique el efecto de la acción.\nPor ejemplo: \'Toca dos veces para [ guardar | abrir | cerrar | … ]\'.</string>
+
+    <string name="touch_target_related_link_1_name">Documentación Android</string>
+    <string name="touch_target_related_link_1" translatable="false">https://support.google.com/accessibility/android/answer/7101858</string>
+
+    <string name="touch_target_related_link_2_name" translatable="false">Material Design</string>
+    <string name="touch_target_related_link_2" translatable="false">https://m2.material.io/design/layout/spacing-methods.html#touch-targets</string>
+
+    <string name="touch_target_related_link_3_name" translatable="false">Magenta</string>
+    <string name="touch_target_related_link_3" translatable="false">https://www.magentaa11y.com/checklist-native/button</string>
+
+    <!-- Headings -->
+    <string name="headings_title_section">Encabezados</string>
+
+    <!-- Toggleables -->
+    <string name="toggleables_title_section">Toggleables</string>
+
+    <string name="toggleables_implementation_android_switch_text">Componente Switch de Android</string>
+    <string name="toggleables_implementation_custom_title">Personalizar anuncios</string>
+    <string name="toggleables_implementation_custom_subtitle">Mejora la relevancia en anuncios</string>
+
+    <!-- Accessibility strings -->
+    <string name="accessibility_back_button">Volver atrás</string>
+    <string name="accessibility_go_to_website_label">ir al sitio web</string>
+    <string name="accessibility_close_button">Cerrar</string>
+    <string name="accessibility_switch_toggle_action">alternar</string>
+    <string name="accessibility_checkbox_turn_on_action">activar</string>
+    <string name="accessibility_checkbox_turn_off_action">desactivar</string>
+
 </resources>

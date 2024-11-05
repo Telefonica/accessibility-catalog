@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.toggleables.CheckBoxCustomComponent xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/checkbox_custom_component_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="HardcodedText">
+
+    <ImageView
+        android:id="@+id/custom_checkbox_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/baseline_ads_click_24" />
+
+    <TextView
+        android:id="@+id/custom_checkbox_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:importantForAccessibility="no"
+        android:text="Customize Ads"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/custom_checkbox_subtitle"
+        app:layout_constraintStart_toEndOf="@id/custom_checkbox_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/custom_checkbox_subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:importantForAccessibility="no"
+        android:text="Improve your advertising relevance"
+        android:textColor="@color/grey"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/custom_toggleable_checkbox"
+        app:layout_constraintStart_toEndOf="@id/custom_checkbox_image"
+        app:layout_constraintTop_toBottomOf="@id/custom_checkbox_title" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/custom_toggleable_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:theme="@style/Theme.Material3.Light"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.toggleables.CheckBoxCustomComponent>

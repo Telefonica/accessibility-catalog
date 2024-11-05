@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_android_component"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/toggleables_implementation_android_switch_text"
+        android:textSize="18sp"
+        android:theme="@style/Theme.Material3.Light" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="4dp" />
+
+    <include layout="@layout/switch_custom_component" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <include layout="@layout/checkbox_custom_component" />
+</LinearLayout>

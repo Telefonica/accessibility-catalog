@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.toggleables.SwitchCustomComponent xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/switch_custom_component_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/custom_switch_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/baseline_ads_click_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/custom_switch_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:importantForAccessibility="no"
+        android:text="@string/toggleables_implementation_custom_title"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/custom_switch_subtitle"
+        app:layout_constraintStart_toEndOf="@id/custom_switch_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/custom_switch_subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:importantForAccessibility="no"
+        android:text="@string/toggleables_implementation_custom_subtitle"
+        android:textColor="@color/grey"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/custom_toggleable_switch"
+        app:layout_constraintStart_toEndOf="@id/custom_switch_image"
+        app:layout_constraintTop_toBottomOf="@id/custom_switch_title" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/custom_toggleable_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:importantForAccessibility="no"
+        android:theme="@style/Theme.Material3.Light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.toggleables.SwitchCustomComponent>
