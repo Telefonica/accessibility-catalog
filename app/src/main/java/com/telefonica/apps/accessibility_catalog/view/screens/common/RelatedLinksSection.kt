@@ -33,15 +33,17 @@ fun RelatedLinksSection(
         isTitleHeading = true,
     )
     relatedLinks.forEach { relatedLink ->
+        val url = stringResource(id = relatedLink.url)
+
         Spacer(modifier = Modifier.height(12.dp))
         Text(
             modifier = Modifier
                 .clickable(onClickLabel = stringResource(id = R.string.accessibility_go_to_website_label)) {
-                    uriHandler.openUri(relatedLink.url)
+                    uriHandler.openUri(url)
                 },
             text = buildAnnotatedString {
                 val link = LinkAnnotation.Url(
-                    url = relatedLink.url,
+                    url = url,
                     styles = TextLinkStyles(style = SpanStyle(color = MisticaTheme.colors.textLink)),
                 ) { linkAnnotation ->
                     val url = (linkAnnotation as LinkAnnotation.Url).url

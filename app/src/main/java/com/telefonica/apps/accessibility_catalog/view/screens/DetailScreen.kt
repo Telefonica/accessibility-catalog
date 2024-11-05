@@ -18,15 +18,18 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.telefonica.apps.accessibility_catalog.R
-import com.telefonica.apps.accessibility_catalog.view.models.RelatedLink
 import com.telefonica.apps.accessibility_catalog.view.screens.common.AbstractSection
 import com.telefonica.apps.accessibility_catalog.view.screens.common.RelatedLinksSection
 import com.telefonica.apps.accessibility_catalog.view.screens.common.RequirementsSection
+import com.telefonica.apps.accessibility_catalog.view.viewmodels.DetailViewModel
 import com.telefonica.mistica.compose.button.Button
 import com.telefonica.mistica.compose.theme.MisticaTheme
 import com.telefonica.mistica.compose.title.Title
@@ -38,79 +41,66 @@ import java.util.UUID
 fun DetailScreen(
     elementId: UUID,
     modifier: Modifier = Modifier,
+    viewModel: DetailViewModel = hiltViewModel(),
     onBackPressed: () -> Unit,
+    onImplementationClick: () -> Unit,
 ) {
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                colors = TopAppBarDefaults.topAppBarColors(containerColor = MisticaTheme.colors.brandLow),
-                title = { Title(text = "Áreas clicables", style = TitleStyle.TITLE_2) }, // todo dynamic title
-                navigationIcon = {
-                    IconButton(onClick = onBackPressed) {
-                        Icon(imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(id = R.string.accessibility_back_button))
+    val detailState = viewModel.state.collectAsState()
+
+    LaunchedEffect(key1 = Unit) {
+        viewModel.init(elementId)
+    }
+
+    detailState.value?.let { elementDetail ->
+        Scaffold(
+            topBar = {
+                TopAppBar(
+                    colors = TopAppBarDefaults.topAppBarColors(containerColor = MisticaTheme.colors.brandLow),
+                    title = { Title(text = stringResource(id = elementDetail.nameResId), style = TitleStyle.TITLE_2) },
+                    navigationIcon = {
+                        IconButton(onClick = onBackPressed) {
+                            Icon(imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(id = R.string.accessibility_back_button))
+                        }
                     }
-                }
-            )
-        }
-    ) { insets ->
-        Box(
-            modifier = modifier
-                .padding(insets)
-                .fillMaxSize()
-        ) {
-            Column(
-                modifier = Modifier.verticalScroll(rememberScrollState())
+                )
+            }
+        ) { insets ->
+            Box(
+                modifier = modifier
+                    .padding(insets)
+                    .fillMaxSize()
             ) {
                 Column(
-                    modifier = Modifier.padding(horizontal = 16.dp)
+                    modifier = Modifier.verticalScroll(rememberScrollState())
                 ) {
+                    Column(
+                        modifier = Modifier.padding(horizontal = 16.dp)
+                    ) {
+                        Spacer(modifier = Modifier.height(16.dp))
+                        AbstractSection(content = stringResource(id = elementDetail.abstractResId))
 
-                    Spacer(modifier = Modifier.height(16.dp))
+                        if (elementDetail.requirementsResId.isNotEmpty()) {
+                            Spacer(modifier = Modifier.height(20.dp))
+                            RequirementsSection(requirements = elementDetail.requirementsResId.map { stringResource(id = it) })
+                        }
 
-                    AbstractSection(content = stringResource(id = R.string.touch_target_abstract))
+                        if (elementDetail.relatedLinksResId.isNotEmpty()) {
+                            Spacer(modifier = Modifier.height(20.dp))
+                            RelatedLinksSection(relatedLinks = elementDetail.relatedLinksResId)
+                        }
 
-                    Spacer(modifier = Modifier.height(20.dp))
-
-                    RequirementsSection(
-                        requirements = listOf(
-                            stringResource(id = R.string.touch_target_requirement_touch_target),
-                            stringResource(id = R.string.touch_target_requirement_space_between),
-                            stringResource(id = R.string.touch_target_requirement_custom_announcement),
-                        )
-                    )
-
-                    Spacer(modifier = Modifier.height(20.dp))
-
-                    RelatedLinksSection(
-                        relatedLinks = listOf(
-                            RelatedLink(
-                                url = stringResource(id = R.string.touch_target_related_link_1),
-                                nameResId = R.string.touch_target_related_link_1_name
-                            ),
-                            RelatedLink(
-                                url = stringResource(id = R.string.touch_target_related_link_2),
-                                nameResId = R.string.touch_target_related_link_2_name
-                            ),
-                            RelatedLink(
-                                url = stringResource(id = R.string.touch_target_related_link_3),
-                                nameResId = R.string.touch_target_related_link_3_name
-                            ),
-                        )
-                    )
-
-                    Spacer(modifier = Modifier.height(80.dp))
+                        Spacer(modifier = Modifier.height(80.dp))
+                    }
                 }
+                Button(
+                    modifier = Modifier
+                        .fillMaxWidth(0.75f)
+                        .align(Alignment.BottomCenter)
+                        .padding(bottom = 16.dp),
+                    text = stringResource(id = R.string.implementation_text),
+                    onClickListener = onImplementationClick
+                )
             }
-            Button(
-                modifier = Modifier
-                    .fillMaxWidth(0.75f)
-                    .align(Alignment.BottomCenter)
-                    .padding(bottom = 16.dp),
-                text = stringResource(id = R.string.implementation_button_text),
-                onClickListener = {
-                    // todo - open implementation
-                }
-            )
         }
     }
 }

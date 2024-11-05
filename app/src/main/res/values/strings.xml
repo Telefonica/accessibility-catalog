@@ -2,7 +2,9 @@
     <string name="app_name">Catálgo de accesibilidad</string>
 
     <!-- Common -->
-    <string name="implementation_button_text">Implementación</string>
+    <string name="implementation_text">Implementación</string>
+    <string name="xml_views_implementation_title">Vistas en XML</string>
+    <string name="compose_implementation_title" translatable="false">Compose</string>
 
     <!-- Sections -->
     <string name="abstract_section_title">General</string>
@@ -32,8 +34,15 @@
     <!-- Headings -->
     <string name="headings_title_section">Encabezados</string>
 
+    <!-- Toggleables -->
+    <string name="toggleables_title_section">Toggleables</string>
+
     <!-- Accessibility strings -->
     <string name="accessibility_back_button">Volver atrás</string>
     <string name="accessibility_go_to_website_label">ir al sitio web</string>
+    <string name="accessibility_close_button">Cerrar</string>
+    <string name="accessibility_switch_toggle_action">alternar</string>
+    <string name="accessibility_checkbox_turn_on_action">activar</string>
+    <string name="accessibility_checkbox_turn_off_action">desactivar</string>
 
 </resources>

@@ -2,7 +2,13 @@ package com.telefonica.apps.accessibility_catalog.view.navigation
 
 import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.core.tween
+import androidx.compose.animation.scaleIn
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOut
+import androidx.compose.animation.slideOutVertically
+import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
@@ -12,6 +18,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.telefonica.apps.accessibility_catalog.view.screens.DashboardScreen
 import com.telefonica.apps.accessibility_catalog.view.screens.DetailScreen
+import com.telefonica.apps.accessibility_catalog.view.screens.ImplementationScreen
 import java.util.UUID
 
 private const val ID_ARGUMENT = "id_argument"
@@ -57,7 +64,22 @@ fun AccessibilityCatalogNavHost(
             val idArgument = navBackStackEntry.arguments?.getString(ID_ARGUMENT)
             DetailScreen(
                 elementId = UUID.fromString(idArgument),
-                onBackPressed = { navController.navigateUp() }
+                onBackPressed = { navController.navigateUp() },
+                onImplementationClick = {
+                    navController.navigateSingleTopTo(Implementation.simpleRoute)
+                }
+            )
+        }
+
+        composable(
+            route = Implementation.simpleRoute,
+            enterTransition = { slideInVertically(initialOffsetY = { 1800 }) },
+            exitTransition = { slideOutVertically(targetOffsetY = { 1800 }) },
+        ) {
+            ImplementationScreen(
+                onCloseClick = {
+                    navController.navigateSingleTopTo(Dashboard.simpleRoute)
+                }
             )
         }
     }
