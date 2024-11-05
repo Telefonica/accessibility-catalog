@@ -41,5 +41,5 @@
     <string name="accessibility_switch_toggle_action">toggle</string>
     <string name="accessibility_checkbox_turn_on_action">turn on</string>
     <string name="accessibility_checkbox_turn_off_action">turn off</string>
-    
+
 </resources>
