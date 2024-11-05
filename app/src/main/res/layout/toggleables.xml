@@ -8,7 +8,7 @@
         android:id="@+id/switch_android_component"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Android Switch component"
+        android:text="@string/toggleables_implementation_android_switch_text"
         android:textSize="18sp"
         android:theme="@style/Theme.Material3.Light" />
 

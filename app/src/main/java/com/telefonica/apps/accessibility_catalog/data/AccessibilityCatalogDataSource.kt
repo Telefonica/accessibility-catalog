@@ -1,21 +1,17 @@
 package com.telefonica.apps.accessibility_catalog.data
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.viewinterop.AndroidView
 import com.telefonica.apps.accessibility_catalog.R
 import com.telefonica.apps.accessibility_catalog.view.models.AccessibilityElement
 import com.telefonica.apps.accessibility_catalog.view.models.RelatedLink
 import com.telefonica.apps.accessibility_catalog.view.screens.common.AndroidViewImplementation
-import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.toggleables.CustomToggleablesView
+import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.toggleables.ToggleablesView
 import java.util.UUID
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -48,9 +44,7 @@ class AccessibilityCatalogDataSource @Inject constructor() {
                     nameResId = R.string.touch_target_related_link_3_name
                 ),
             ),
-            xmlViewImplementation = {
-                // todo
-            },
+            xmlViewImplementation = null, // todo
             composeImplementation = {
                 // todo
             },
@@ -78,7 +72,7 @@ class AccessibilityCatalogDataSource @Inject constructor() {
             abstractResId = android.R.string.ok,
             xmlViewImplementation = {
                 AndroidViewImplementation(factory = { context ->
-                    CustomToggleablesView(context = context)
+                    ToggleablesView(context = context)
                 })
             },
             composeImplementation = {

@@ -25,10 +25,10 @@
     <string name="touch_target_related_link_1_name">Documentación Android</string>
     <string name="touch_target_related_link_1" translatable="false">https://support.google.com/accessibility/android/answer/7101858</string>
 
-    <string name="touch_target_related_link_2_name">Material Design</string>
+    <string name="touch_target_related_link_2_name" translatable="false">Material Design</string>
     <string name="touch_target_related_link_2" translatable="false">https://m2.material.io/design/layout/spacing-methods.html#touch-targets</string>
 
-    <string name="touch_target_related_link_3_name">Magenta</string>
+    <string name="touch_target_related_link_3_name" translatable="false">Magenta</string>
     <string name="touch_target_related_link_3" translatable="false">https://www.magentaa11y.com/checklist-native/button</string>
 
     <!-- Headings -->
@@ -36,6 +36,10 @@
 
     <!-- Toggleables -->
     <string name="toggleables_title_section">Toggleables</string>
+
+    <string name="toggleables_implementation_android_switch_text">Componente Switch de Android</string>
+    <string name="toggleables_implementation_custom_title">Personalizar anuncios</string>
+    <string name="toggleables_implementation_custom_subtitle">Mejora la relevancia en anuncios</string>
 
     <!-- Accessibility strings -->
     <string name="accessibility_back_button">Volver atrás</string>

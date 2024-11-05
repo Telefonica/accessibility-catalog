@@ -82,9 +82,8 @@ fun AccessibilityCatalogNavHost(
             val idArgument = navBackStackEntry.arguments?.getString(ID_ARGUMENT)
             ImplementationScreen(
                 elementId = UUID.fromString(idArgument),
-                onCloseClick = { elementId ->
-                    //todo check nav flow -> navController.navigateUp()
-                    navController.navigateSingleTopToWithIdArgument(Detail.simpleRoute, elementId.toString())
+                onCloseClick = {
+                    navController.navigateUp()
                 }
             )
         }
@@ -93,11 +92,6 @@ fun AccessibilityCatalogNavHost(
 
 fun NavHostController.navigateSingleTopTo(route: String) =
     this.navigate(route) {
-        popUpTo(
-            this@navigateSingleTopTo.graph.findStartDestination().id
-        ) {
-            saveState = true
-        }
         launchSingleTop = true
         restoreState = true
     }
