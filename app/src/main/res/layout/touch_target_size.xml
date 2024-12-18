@@ -186,7 +186,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingTop="10dp"
-        android:paddingVertical="8dp"
+        android:paddingHorizontal="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/custom_announcement_title">
@@ -234,7 +234,8 @@
             android:layout_gravity="center"
             android:minWidth="48dp"
             android:minHeight="48dp"
-            android:contentDescription="@string/touch_target_implementation_filter_image_button_text"
+            android:padding="12dp"
+            android:contentDescription="@string/touch_target_implementation_close_image_button_text"
             android:src="@drawable/baseline_close_24"
             app:tint="@android:color/black" />
 

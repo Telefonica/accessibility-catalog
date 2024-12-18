@@ -50,7 +50,7 @@ class TouchTargetView @JvmOverloads constructor(
 
         findViewById<ImageView>(R.id.custom_announcement_icon_button).apply {
             implementOnClickFeedback()
-            setCustomAnnouncementTap(context.getString(R.string.touch_target_implementation_filter_image_button_action))
+            setCustomAnnouncementTap(context.getString(R.string.touch_target_implementation_close_image_button_action))
         }
         //endregion
     }

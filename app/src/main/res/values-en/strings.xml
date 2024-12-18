@@ -35,8 +35,8 @@
     <string name="touch_target_implementation_send_button_action">send</string>
     <string name="touch_target_implementation_filter_chip_text">Shoes</string>
     <string name="touch_target_implementation_filter_chip_action">filter</string>
-    <string name="touch_target_implementation_filter_image_button_text">Close window</string>
-    <string name="touch_target_implementation_filter_image_button_action">close</string>
+    <string name="touch_target_implementation_close_image_button_text">Close window</string>
+    <string name="touch_target_implementation_close_image_button_action">close</string>
 
     <!-- Headings -->
     <string name="headings_title_section">Headings</string>

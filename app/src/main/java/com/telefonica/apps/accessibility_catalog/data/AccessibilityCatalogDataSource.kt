@@ -11,6 +11,7 @@ import com.telefonica.apps.accessibility_catalog.R
 import com.telefonica.apps.accessibility_catalog.view.models.AccessibilityElement
 import com.telefonica.apps.accessibility_catalog.view.models.RelatedLink
 import com.telefonica.apps.accessibility_catalog.view.screens.common.AndroidViewImplementation
+import com.telefonica.apps.accessibility_catalog.view.screens.common.ComposeImplementation
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.compose.touchtarget.TouchTarget
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.toggleables.ToggleablesView
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.touchtarget.TouchTargetView
@@ -52,7 +53,9 @@ class AccessibilityCatalogDataSource @Inject constructor() {
                 })
             },
             composeImplementation = {
-                TouchTarget()
+                ComposeImplementation {
+                    TouchTarget()
+                }
             },
         ),
         //endregion

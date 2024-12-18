@@ -42,8 +42,8 @@
     <string name="touch_target_implementation_send_button_action">enviar</string>
     <string name="touch_target_implementation_filter_chip_text">Zapatos</string>
     <string name="touch_target_implementation_filter_chip_action">filtrar</string>
-    <string name="touch_target_implementation_filter_image_button_text">Cerrar ventana</string>
-    <string name="touch_target_implementation_filter_image_button_action">cerrar</string>
+    <string name="touch_target_implementation_close_image_button_text">Cerrar ventana</string>
+    <string name="touch_target_implementation_close_image_button_action">cerrar</string>
 
     <!-- Headings -->
     <string name="headings_title_section">Encabezados</string>
