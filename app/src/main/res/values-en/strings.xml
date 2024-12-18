@@ -24,6 +24,20 @@
 
     <string name="touch_target_related_link_1_name">Android documentation</string>
 
+    <string name="touch_target_implementation_touch_delegate_title">Using Touch Delegate</string>
+    <string name="touch_target_implementation_wrapped_container_title">Wrapped in a container</string>
+    <string name="touch_target_implementation_custom_tap_announcement_title">Custom action announcement</string>
+    <string name="touch_target_implementation_small_button">Small button</string>
+    <string name="touch_target_implementation_small_chip">Small chip</string>
+    <string name="touch_target_implementation_small_icon">Small icon button</string>
+    <string name="touch_target_implementation_feedback_clicked">Element clicked</string>
+    <string name="touch_target_implementation_send_button_text">Send email</string>
+    <string name="touch_target_implementation_send_button_action">send</string>
+    <string name="touch_target_implementation_filter_chip_text">Shoes</string>
+    <string name="touch_target_implementation_filter_chip_action">filter</string>
+    <string name="touch_target_implementation_filter_image_button_text">Close window</string>
+    <string name="touch_target_implementation_filter_image_button_action">close</string>
+
     <!-- Headings -->
     <string name="headings_title_section">Headings</string>
 

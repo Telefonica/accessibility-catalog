@@ -31,6 +31,20 @@
     <string name="touch_target_related_link_3_name" translatable="false">Magenta</string>
     <string name="touch_target_related_link_3" translatable="false">https://www.magentaa11y.com/checklist-native/button</string>
 
+    <string name="touch_target_implementation_touch_delegate_title">Usando Touch Delegate</string>
+    <string name="touch_target_implementation_wrapped_container_title">Envuelto en un contenedor</string>
+    <string name="touch_target_implementation_custom_tap_announcement_title">Anuncio de acción personalizada</string>
+    <string name="touch_target_implementation_small_button">Botón pequeño</string>
+    <string name="touch_target_implementation_small_chip">Etiqueta pequeña</string>
+    <string name="touch_target_implementation_small_icon">Botón de icono pequeño</string>
+    <string name="touch_target_implementation_feedback_clicked">Elemento pulsado</string>
+    <string name="touch_target_implementation_send_button_text">Enviar correo</string>
+    <string name="touch_target_implementation_send_button_action">enviar</string>
+    <string name="touch_target_implementation_filter_chip_text">Zapatos</string>
+    <string name="touch_target_implementation_filter_chip_action">filtrar</string>
+    <string name="touch_target_implementation_filter_image_button_text">Cerrar ventana</string>
+    <string name="touch_target_implementation_filter_image_button_action">cerrar</string>
+
     <!-- Headings -->
     <string name="headings_title_section">Encabezados</string>
 

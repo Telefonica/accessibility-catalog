@@ -11,7 +11,9 @@ import com.telefonica.apps.accessibility_catalog.R
 import com.telefonica.apps.accessibility_catalog.view.models.AccessibilityElement
 import com.telefonica.apps.accessibility_catalog.view.models.RelatedLink
 import com.telefonica.apps.accessibility_catalog.view.screens.common.AndroidViewImplementation
+import com.telefonica.apps.accessibility_catalog.view.screens.implementations.compose.touchtarget.TouchTarget
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.toggleables.ToggleablesView
+import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.touchtarget.TouchTargetView
 import java.util.UUID
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -44,9 +46,13 @@ class AccessibilityCatalogDataSource @Inject constructor() {
                     nameResId = R.string.touch_target_related_link_3_name
                 ),
             ),
-            xmlViewImplementation = null, // todo
+            xmlViewImplementation = {
+                AndroidViewImplementation(factory = { context ->
+                    TouchTargetView(context = context)
+                })
+            },
             composeImplementation = {
-                // todo
+                TouchTarget()
             },
         ),
         //endregion
