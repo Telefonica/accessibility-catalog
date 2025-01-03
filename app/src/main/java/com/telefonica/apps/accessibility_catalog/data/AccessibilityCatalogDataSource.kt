@@ -9,7 +9,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.telefonica.apps.accessibility_catalog.R
 import com.telefonica.apps.accessibility_catalog.view.models.AccessibilityElement
-import com.telefonica.apps.accessibility_catalog.view.models.RelatedLink
+import com.telefonica.apps.accessibility_catalog.view.models.TextLink
 import com.telefonica.apps.accessibility_catalog.view.screens.common.AndroidViewImplementation
 import com.telefonica.apps.accessibility_catalog.view.screens.common.ComposeImplementation
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.compose.touchtarget.TouchTarget
@@ -34,28 +34,32 @@ class AccessibilityCatalogDataSource @Inject constructor() {
                 R.string.touch_target_requirement_custom_announcement,
             ),
             relatedLinksResId = listOf(
-                RelatedLink(
+                TextLink(
                     url = R.string.touch_target_related_link_1,
                     nameResId = R.string.touch_target_related_link_1_name
                 ),
-                RelatedLink(
+                TextLink(
                     url = R.string.touch_target_related_link_2,
                     nameResId = R.string.touch_target_related_link_2_name
                 ),
-                RelatedLink(
+                TextLink(
                     url = R.string.touch_target_related_link_3,
                     nameResId = R.string.touch_target_related_link_3_name
                 ),
             ),
             xmlViewImplementation = {
-                AndroidViewImplementation(factory = { context ->
-                    TouchTargetView(context = context)
-                })
+                AndroidViewImplementation(
+                    factory = { context ->
+                        TouchTargetView(context = context)
+                    },
+                    documentationUrl = R.string.touch_target_implementation_xml_documentation_url
+                )
             },
             composeImplementation = {
-                ComposeImplementation {
-                    TouchTarget()
-                }
+                ComposeImplementation(
+                    composable = { TouchTarget() },
+                    documentationUrl = R.string.touch_target_implementation_compose_documentation_url
+                )
             },
         ),
         //endregion

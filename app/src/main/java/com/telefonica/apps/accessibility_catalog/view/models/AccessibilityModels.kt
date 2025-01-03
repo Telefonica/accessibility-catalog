@@ -9,7 +9,7 @@ data class AccessibilityElement(
     @StringRes val nameResId: Int,
     @StringRes val abstractResId: Int,
     val requirementsResId: List<Int> = emptyList(),
-    val relatedLinksResId: List<RelatedLink> = emptyList(),
+    val relatedLinksResId: List<TextLink> = emptyList(),
     val xmlViewImplementation: (@Composable () -> Unit)?,
     val composeImplementation: (@Composable () -> Unit)?,
 )
@@ -24,7 +24,7 @@ data class AccessibilityDetail(
     @StringRes val nameResId: Int,
     @StringRes val abstractResId: Int,
     val requirementsResId: List<Int> = emptyList(),
-    val relatedLinksResId: List<RelatedLink> = emptyList(),
+    val relatedLinksResId: List<TextLink> = emptyList(),
 )
 
 data class AccessibilityImplementation(
@@ -32,7 +32,7 @@ data class AccessibilityImplementation(
     val composeImplementation: (@Composable () -> Unit)?,
 )
 
-data class RelatedLink(
+data class TextLink(
     @StringRes val url: Int,
     @StringRes val nameResId: Int,
 )

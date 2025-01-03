@@ -5,6 +5,7 @@
     <!-- Common -->
     <string name="implementation_text">Implementation</string>
     <string name="xml_views_implementation_title">XML Views</string>
+    <string name="implementation_see_documentation">See documentation</string>
 
     <!-- Sections -->
     <string name="abstract_section_title">Abstract</string>
@@ -33,7 +34,7 @@
     <string name="touch_target_implementation_feedback_clicked">Element clicked</string>
     <string name="touch_target_implementation_send_button_text">Send email</string>
     <string name="touch_target_implementation_send_button_action">send</string>
-    <string name="touch_target_implementation_filter_chip_text">Shoes</string>
+    <string name="touch_target_implementation_filter_chip_text">My filter</string>
     <string name="touch_target_implementation_filter_chip_action">filter</string>
     <string name="touch_target_implementation_close_image_button_text">Close window</string>
     <string name="touch_target_implementation_close_image_button_action">close</string>

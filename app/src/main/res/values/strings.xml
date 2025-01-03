@@ -5,6 +5,7 @@
     <string name="implementation_text">Implementación</string>
     <string name="xml_views_implementation_title">Vistas en XML</string>
     <string name="compose_implementation_title" translatable="false">Compose</string>
+    <string name="implementation_see_documentation">Ver documentación</string>
 
     <!-- Sections -->
     <string name="abstract_section_title">General</string>
@@ -31,6 +32,9 @@
     <string name="touch_target_related_link_3_name" translatable="false">Magenta</string>
     <string name="touch_target_related_link_3" translatable="false">https://www.magentaa11y.com/checklist-native/button</string>
 
+    <string name="touch_target_implementation_xml_documentation_url" translatable="false">https://www.google.es</string>
+    <string name="touch_target_implementation_compose_documentation_url" translatable="false">https://www.yahoo.es</string>
+
     <string name="touch_target_implementation_touch_delegate_title">Usando Touch Delegate</string>
     <string name="touch_target_implementation_wrapped_container_title">Envuelto en un contenedor</string>
     <string name="touch_target_implementation_custom_tap_announcement_title">Anuncio de acción personalizada</string>
@@ -40,7 +44,7 @@
     <string name="touch_target_implementation_feedback_clicked">Elemento pulsado</string>
     <string name="touch_target_implementation_send_button_text">Enviar correo</string>
     <string name="touch_target_implementation_send_button_action">enviar</string>
-    <string name="touch_target_implementation_filter_chip_text">Zapatos</string>
+    <string name="touch_target_implementation_filter_chip_text">Mi filtro</string>
     <string name="touch_target_implementation_filter_chip_action">filtrar</string>
     <string name="touch_target_implementation_close_image_button_text">Cerrar ventana</string>
     <string name="touch_target_implementation_close_image_button_action">cerrar</string>
