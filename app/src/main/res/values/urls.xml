@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Touch target -->
+    <string name="touch_target_related_link_1" translatable="false">https://support.google.com/accessibility/android/answer/7101858</string>
+    <string name="touch_target_related_link_2" translatable="false">https://m2.material.io/design/layout/spacing-methods.html#touch-targets</string>
+    <string name="touch_target_related_link_3" translatable="false">https://www.magentaa11y.com/checklist-native/button</string>
+    <string name="touch_target_implementation_xml_documentation_url" translatable="false">https://www.google.es</string>
+    <!-- todo: change to main branch -->
+    <string name="touch_target_implementation_compose_documentation_url" translatable="false">https://github.com/Telefonica/accessibility-catalog/tree/feature/setup_implementations/app/src/main/java/com/telefonica/apps/accessibility_catalog/view/screens/implementations/compose/touchtarget#compose-implementation-for-touch-target</string>
+</resources>
