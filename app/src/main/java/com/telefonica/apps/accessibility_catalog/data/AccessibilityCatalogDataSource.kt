@@ -27,6 +27,7 @@ class AccessibilityCatalogDataSource @Inject constructor() {
         AccessibilityElement(
             id = UUID.randomUUID(),
             nameResId = R.string.touch_target_title_section,
+            iconResId = R.drawable.ic_touch_target,
             abstractResId = R.string.touch_target_abstract,
             requirementsResId = listOf(
                 R.string.touch_target_requirement_touch_target,
@@ -68,6 +69,7 @@ class AccessibilityCatalogDataSource @Inject constructor() {
         AccessibilityElement(
             id = UUID.randomUUID(),
             nameResId = R.string.headings_title_section,
+            iconResId = R.drawable.ic_header,
             abstractResId = android.R.string.ok,
             xmlViewImplementation = {
                 // todo
@@ -82,6 +84,7 @@ class AccessibilityCatalogDataSource @Inject constructor() {
         AccessibilityElement(
             id = UUID.randomUUID(),
             nameResId = R.string.toggleables_title_section,
+            iconResId = R.drawable.ic_toggleable,
             abstractResId = android.R.string.ok,
             xmlViewImplementation = {
                 AndroidViewImplementation(factory = { context ->

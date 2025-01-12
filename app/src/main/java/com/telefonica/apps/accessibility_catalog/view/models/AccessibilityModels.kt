@@ -1,5 +1,6 @@
 package com.telefonica.apps.accessibility_catalog.view.models
 
+import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.compose.runtime.Composable
 import java.util.UUID
@@ -7,6 +8,7 @@ import java.util.UUID
 data class AccessibilityElement(
     val id: UUID,
     @StringRes val nameResId: Int,
+    @DrawableRes val iconResId: Int,
     @StringRes val abstractResId: Int,
     val requirementsResId: List<Int> = emptyList(),
     val relatedLinksResId: List<TextLink> = emptyList(),
@@ -17,6 +19,7 @@ data class AccessibilityElement(
 data class DashboardElement(
     val id: UUID,
     @StringRes val nameResId: Int,
+    @DrawableRes val iconResId: Int,
 )
 
 data class AccessibilityDetail(

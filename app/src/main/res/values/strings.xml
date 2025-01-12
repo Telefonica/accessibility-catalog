@@ -6,6 +6,9 @@
     <string name="xml_views_implementation_title">Vistas en XML</string>
     <string name="compose_implementation_title" translatable="false">Compose</string>
     <string name="implementation_see_source_code">Ver código fuente</string>
+    <string name="implementation_no_accessibility_service_callout_title">Sin servicio de accesibilidad</string>
+    <string name="implementation_no_accessibility_service_callout_description">Activa un servicio de accessibilidad (ej: TalkBack) para probar los ejemplos de esta página.</string>
+    <string name="implementation_no_accessibility_service_callout_button">Gestionar servicios</string>
 
     <!-- Sections -->
     <string name="abstract_section_title">General</string>
