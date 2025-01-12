@@ -47,6 +47,9 @@
     <!-- Headings -->
     <string name="headings_title_section">Encabezados</string>
 
+    <string name="headings_implementation_example_one">Encabezado 1</string>
+    <string name="headings_implementation_example_two">Encabezado 2</string>
+
     <!-- Toggleables -->
     <string name="toggleables_title_section">Toggleables</string>
 

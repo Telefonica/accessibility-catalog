@@ -1,4 +1,4 @@
-XML view implementation showing the use of custom toggleable views with suitable accessibility configuration.
+XML View implementation showing the use of custom toggleable Views with suitable accessibility configuration.
 
 You can start exploring the implementation from the [ToggleablesView](ToggleablesView.kt).
 

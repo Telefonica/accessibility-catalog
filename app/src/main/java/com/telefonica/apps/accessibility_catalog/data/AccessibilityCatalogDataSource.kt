@@ -14,6 +14,7 @@ import com.telefonica.apps.accessibility_catalog.view.screens.common.AndroidView
 import com.telefonica.apps.accessibility_catalog.view.screens.common.ComposeImplementation
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.compose.headings.Headings
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.compose.touchtarget.TouchTarget
+import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.headings.HeadingsView
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.toggleables.ToggleablesView
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.touchtarget.TouchTargetView
 import java.util.UUID
@@ -73,7 +74,12 @@ class AccessibilityCatalogDataSource @Inject constructor() {
             iconResId = R.drawable.ic_header,
             abstractResId = android.R.string.ok,
             xmlViewImplementation = {
-                // todo
+                AndroidViewImplementation(
+                    factory = { context ->
+                        HeadingsView(context = context)
+                    },
+                    documentationUrl = R.string.headings_implementation_xml_documentation_url
+                )
             },
             composeImplementation = {
                 ComposeImplementation(
