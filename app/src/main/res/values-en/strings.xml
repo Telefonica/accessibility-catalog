@@ -3,6 +3,8 @@
     <string name="app_name">Accessibility catalog</string>
 
     <!-- Common -->
+    <string name="related_link_android">Android documentation</string>
+
     <string name="implementation_text">Implementation</string>
     <string name="xml_views_implementation_title">XML Views</string>
     <string name="implementation_see_source_code">See source code</string>
@@ -26,8 +28,6 @@
     <string name="touch_target_requirement_space_between">Clickable elements must be at least 8dp apart.</string>
     <string name="touch_target_requirement_custom_announcement">The clickable element can announce a custom text indicating the effect of the action.\nFor example: \'Double tap to [ save | open | close | … ]\'.</string>
 
-    <string name="touch_target_related_link_1_name">Android documentation</string>
-
     <string name="touch_target_implementation_touch_delegate_title">Using Touch Delegate</string>
     <string name="touch_target_implementation_wrapped_container_title">Wrapped in a container</string>
     <string name="touch_target_implementation_custom_tap_announcement_title">Custom action announcement</string>
@@ -44,6 +44,11 @@
 
     <!-- Headings -->
     <string name="headings_title_section">Headings</string>
+    <string name="headings_abstract">Screens displaying dense text or information can be challenging to navigate for users with visual impairments.
+        \n\nImplementing clear heading indicators allows for faster navigation through the content using swipe gestures.</string>
+
+    <string name="headings_requirement_section_principle">Clearly separate information into sections.</string>
+    <string name="headings_requirement_avoid_in_list">Avoid adding headings within lists.</string>
 
     <string name="headings_implementation_example_one">Heading 1</string>
     <string name="headings_implementation_example_two">Heading 2</string>

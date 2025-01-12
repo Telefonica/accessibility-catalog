@@ -2,6 +2,9 @@
     <string name="app_name">Catálgo de accesibilidad</string>
 
     <!-- Common -->
+    <string name="related_link_android">Documentación Android</string>
+    <string name="related_link_magenta" translatable="false">Magenta</string>
+
     <string name="implementation_text">Implementación</string>
     <string name="xml_views_implementation_title">Vistas en XML</string>
     <string name="compose_implementation_title" translatable="false">Compose</string>
@@ -26,9 +29,7 @@
     <string name="touch_target_requirement_space_between">Los elementos clicables deben tener una separación mínima de 8dp entre ellos.</string>
     <string name="touch_target_requirement_custom_announcement">El elemento clicable puede anunciar un texto personalizado que indique el efecto de la acción.\nPor ejemplo: \'Toca dos veces para [ guardar | abrir | cerrar | … ]\'.</string>
 
-    <string name="touch_target_related_link_1_name">Documentación Android</string>
     <string name="touch_target_related_link_2_name" translatable="false">Material Design</string>
-    <string name="touch_target_related_link_3_name" translatable="false">Magenta</string>
 
     <string name="touch_target_implementation_touch_delegate_title">Usando Touch Delegate</string>
     <string name="touch_target_implementation_wrapped_container_title">Envuelto en un contenedor</string>
@@ -46,6 +47,11 @@
 
     <!-- Headings -->
     <string name="headings_title_section">Encabezados</string>
+    <string name="headings_abstract">Las pantallas que muestran mucho texto o información pueden resultar difíciles de navegar para usuarios con discapacidad visual.
+        \n\nImplementar indicadores claros de encabezados permite una navegación más rápida a través del contenido utilizando gestos de deslizamiento, mejorando la accesibilidad y la experiencia general del usuario.</string>
+    
+    <string name="headings_requirement_section_principle">Separa la información en secciones claras.</string>
+    <string name="headings_requirement_avoid_in_list">Evita utilizar encabezados dentro de listas</string>
 
     <string name="headings_implementation_example_one">Encabezado 1</string>
     <string name="headings_implementation_example_two">Encabezado 2</string>

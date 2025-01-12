@@ -1,12 +1,5 @@
 package com.telefonica.apps.accessibility_catalog.data
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.unit.dp
 import com.telefonica.apps.accessibility_catalog.R
 import com.telefonica.apps.accessibility_catalog.view.models.AccessibilityElement
 import com.telefonica.apps.accessibility_catalog.view.models.TextLink
@@ -39,7 +32,7 @@ class AccessibilityCatalogDataSource @Inject constructor() {
             relatedLinksResId = listOf(
                 TextLink(
                     url = R.string.touch_target_related_link_1,
-                    nameResId = R.string.touch_target_related_link_1_name
+                    nameResId = R.string.related_link_android
                 ),
                 TextLink(
                     url = R.string.touch_target_related_link_2,
@@ -47,7 +40,7 @@ class AccessibilityCatalogDataSource @Inject constructor() {
                 ),
                 TextLink(
                     url = R.string.touch_target_related_link_3,
-                    nameResId = R.string.touch_target_related_link_3_name
+                    nameResId = R.string.related_link_magenta
                 ),
             ),
             xmlViewImplementation = {
@@ -72,7 +65,21 @@ class AccessibilityCatalogDataSource @Inject constructor() {
             id = UUID.randomUUID(),
             nameResId = R.string.headings_title_section,
             iconResId = R.drawable.ic_header,
-            abstractResId = android.R.string.ok,
+            abstractResId = R.string.headings_abstract,
+            requirementsResId = listOf(
+                R.string.headings_requirement_section_principle,
+                R.string.headings_requirement_avoid_in_list,
+            ),
+            relatedLinksResId = listOf(
+                TextLink(
+                    url = R.string.headings_related_link_1,
+                    nameResId = R.string.related_link_android,
+                ),
+                TextLink(
+                    url = R.string.headings_related_link_2,
+                    nameResId = R.string.related_link_magenta,
+                )
+            ),
             xmlViewImplementation = {
                 AndroidViewImplementation(
                     factory = { context ->
