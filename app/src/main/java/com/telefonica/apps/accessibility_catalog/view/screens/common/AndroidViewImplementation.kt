@@ -15,7 +15,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
 import com.telefonica.apps.accessibility_catalog.R
 import com.telefonica.apps.accessibility_catalog.utilities.TextWithLink
@@ -37,7 +36,7 @@ fun <T : View> AndroidViewImplementation(
         )
         if (documentationUrl != null) {
             Spacer(Modifier.size(4.dp))
-            TextWithLink(textLink = TextLink(documentationUrl, R.string.implementation_see_documentation))
+            TextWithLink(textLink = TextLink(documentationUrl, R.string.implementation_see_source_code))
         }
     }
 }
@@ -59,7 +58,7 @@ fun ComposeImplementation(
         }
         if (documentationUrl != null) {
             Spacer(Modifier.size(4.dp))
-            TextWithLink(textLink = TextLink(documentationUrl, R.string.implementation_see_documentation))
+            TextWithLink(textLink = TextLink(documentationUrl, R.string.implementation_see_source_code))
         }
     }
 }

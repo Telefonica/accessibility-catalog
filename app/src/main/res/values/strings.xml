@@ -5,7 +5,7 @@
     <string name="implementation_text">Implementación</string>
     <string name="xml_views_implementation_title">Vistas en XML</string>
     <string name="compose_implementation_title" translatable="false">Compose</string>
-    <string name="implementation_see_documentation">Ver documentación</string>
+    <string name="implementation_see_source_code">Ver código fuente</string>
 
     <!-- Sections -->
     <string name="abstract_section_title">General</string>
