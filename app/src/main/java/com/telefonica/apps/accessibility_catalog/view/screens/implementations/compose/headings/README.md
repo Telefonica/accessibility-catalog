@@ -4,7 +4,7 @@ This section demonstrates how to implement Heading configuration in Jetpack Comp
 ```kotlin
 Text(
     modifier = Modifier.semantics { heading() },
-    text = "One Heading"
+    text = "Heading"
 )
 ```
 >[!TIP]
