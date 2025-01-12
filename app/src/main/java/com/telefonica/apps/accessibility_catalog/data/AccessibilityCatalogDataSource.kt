@@ -12,6 +12,7 @@ import com.telefonica.apps.accessibility_catalog.view.models.AccessibilityElemen
 import com.telefonica.apps.accessibility_catalog.view.models.TextLink
 import com.telefonica.apps.accessibility_catalog.view.screens.common.AndroidViewImplementation
 import com.telefonica.apps.accessibility_catalog.view.screens.common.ComposeImplementation
+import com.telefonica.apps.accessibility_catalog.view.screens.implementations.compose.headings.Headings
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.compose.touchtarget.TouchTarget
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.toggleables.ToggleablesView
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.touchtarget.TouchTargetView
@@ -75,7 +76,10 @@ class AccessibilityCatalogDataSource @Inject constructor() {
                 // todo
             },
             composeImplementation = {
-                // todo
+                ComposeImplementation(
+                    composable = { Headings() },
+                    documentationUrl = R.string.headings_implementation_compose_documentation_url
+                )
             },
         ),
         //endregion
@@ -93,12 +97,6 @@ class AccessibilityCatalogDataSource @Inject constructor() {
             },
             composeImplementation = {
                 // todo
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(150.dp)
-                        .background(Color.Blue)
-                )
             },
         ),
         //endregion
