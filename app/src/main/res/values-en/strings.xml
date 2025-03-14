@@ -3,7 +3,8 @@
     <string name="app_name">Accessibility catalog</string>
 
     <!-- Common -->
-    <string name="related_link_android">Android documentation</string>
+    <string name="related_link_android_documentation">Android documentation</string>
+    <string name="related_link_android_code_lab">Android CodeLab</string>
 
     <string name="implementation_text">Implementation</string>
     <string name="xml_views_implementation_title">XML Views</string>
@@ -55,6 +56,11 @@
 
     <!-- Toggleables -->
     <string name="toggleables_title_section">Toggleables</string>
+    <string name="toggleables_abstract">Toggleables are screen elements that allows a user to switch between two distinct states, typically "on" and "off" or "selected" and "unselected."
+        \nThis category primarily encompasses components like Switches and CheckBoxes, where the user can easily toggle their state with a simple interaction.</string>
+
+    <string name="toggleables_requirement_single_focus">Use a single group focus for the elements associated with the switch.</string>
+    <string name="toggleables_requirement_semantic_context">to use semantics to give a clear context for the action of the switch.</string>
 
     <string name="toggleables_implementation_android_switch_text">Android Switch component</string>
     <string name="toggleables_implementation_custom_title">Customize Ads</string>

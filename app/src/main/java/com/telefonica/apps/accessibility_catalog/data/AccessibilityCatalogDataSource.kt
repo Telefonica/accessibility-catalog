@@ -32,7 +32,7 @@ class AccessibilityCatalogDataSource @Inject constructor() {
             relatedLinksResId = listOf(
                 TextLink(
                     url = R.string.touch_target_related_link_1,
-                    nameResId = R.string.related_link_android
+                    nameResId = R.string.related_link_android_documentation
                 ),
                 TextLink(
                     url = R.string.touch_target_related_link_2,
@@ -73,7 +73,7 @@ class AccessibilityCatalogDataSource @Inject constructor() {
             relatedLinksResId = listOf(
                 TextLink(
                     url = R.string.headings_related_link_1,
-                    nameResId = R.string.related_link_android,
+                    nameResId = R.string.related_link_android_documentation,
                 ),
                 TextLink(
                     url = R.string.headings_related_link_2,
@@ -102,7 +102,25 @@ class AccessibilityCatalogDataSource @Inject constructor() {
             id = UUID.randomUUID(),
             nameResId = R.string.toggleables_title_section,
             iconResId = R.drawable.ic_toggleable,
-            abstractResId = android.R.string.ok,
+            abstractResId = R.string.toggleables_abstract,
+            requirementsResId = listOf(
+                R.string.toggleables_requirement_single_focus,
+                R.string.toggleables_requirement_semantic_context,
+            ),
+            relatedLinksResId = listOf(
+                TextLink(
+                    url = R.string.toggleables_related_link_1,
+                    nameResId = R.string.related_link_telefonica,
+                ),
+                TextLink(
+                    url = R.string.toggleables_related_link_2,
+                    nameResId = R.string.related_link_android_code_lab,
+                ),
+                TextLink(
+                    url = R.string.toggleables_related_link_3,
+                    nameResId = R.string.related_link_magenta,
+                )
+            ),
             xmlViewImplementation = {
                 AndroidViewImplementation(factory = { context ->
                     ToggleablesView(context = context)

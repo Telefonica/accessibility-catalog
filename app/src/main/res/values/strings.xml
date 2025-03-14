@@ -2,8 +2,10 @@
     <string name="app_name">Catálgo de accesibilidad</string>
 
     <!-- Common -->
-    <string name="related_link_android">Documentación Android</string>
+    <string name="related_link_android_documentation">Documentación Android</string>
+    <string name="related_link_android_code_lab">Tutorial Android</string>
     <string name="related_link_magenta" translatable="false">Magenta</string>
+    <string name="related_link_telefonica" translatable="false">Telefónica</string>
 
     <string name="implementation_text">Implementación</string>
     <string name="xml_views_implementation_title">Vistas en XML</string>
@@ -51,13 +53,18 @@
         \n\nImplementar indicadores claros de encabezados permite una navegación más rápida a través del contenido utilizando gestos de deslizamiento, mejorando la accesibilidad y la experiencia general del usuario.</string>
     
     <string name="headings_requirement_section_principle">Separa la información en secciones claras.</string>
-    <string name="headings_requirement_avoid_in_list">Evita utilizar encabezados dentro de listas</string>
+    <string name="headings_requirement_avoid_in_list">Evita utilizar encabezados dentro de listas.</string>
 
     <string name="headings_implementation_example_one">Encabezado 1</string>
     <string name="headings_implementation_example_two">Encabezado 2</string>
 
     <!-- Toggleables -->
-    <string name="toggleables_title_section">Toggleables</string>
+    <string name="toggleables_title_section">Interruptores</string>
+    <string name="toggleables_abstract">Los interruptores son elementos de pantalla que permite al usuario alternar entre dos estados distintos, generalmente "activado" y "desactivado" o "seleccionado" y "no seleccionado".
+        \n\nEsta categoría abarca principalmente componentes como interruptores y casillas de verificación, cuyos estados se pueden cambiar fácilmente con una simple interacción.</string>
+
+    <string name="toggleables_requirement_single_focus">Usa un único foco para los elementos asociados al interruptor.</string>
+    <string name="toggleables_requirement_semantic_context">Procura usar semánticas para dar un contexto claro de la acción del interruptor</string>
 
     <string name="toggleables_implementation_android_switch_text">Componente Switch de Android</string>
     <string name="toggleables_implementation_custom_title">Personalizar anuncios</string>
