@@ -6,6 +6,7 @@ import com.telefonica.apps.accessibility_catalog.view.models.TextLink
 import com.telefonica.apps.accessibility_catalog.view.screens.common.AndroidViewImplementation
 import com.telefonica.apps.accessibility_catalog.view.screens.common.ComposeImplementation
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.compose.headings.Headings
+import com.telefonica.apps.accessibility_catalog.view.screens.implementations.compose.toggleables.ToggleablesCompose
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.compose.touchtarget.TouchTarget
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.headings.HeadingsView
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.toggleables.ToggleablesView
@@ -122,12 +123,18 @@ class AccessibilityCatalogDataSource @Inject constructor() {
                 )
             ),
             xmlViewImplementation = {
-                AndroidViewImplementation(factory = { context ->
-                    ToggleablesView(context = context)
-                })
+                AndroidViewImplementation(
+                    factory = { context ->
+                        ToggleablesView(context = context)
+                    },
+                    documentationUrl = R.string.toggleables_implementation_xml_documentation_url
+                )
             },
             composeImplementation = {
-                // todo
+                ComposeImplementation(
+                    composable = { ToggleablesCompose() },
+                    documentationUrl = R.string.toggleables_implementation_compose_documentation_url
+                )
             },
         ),
         //endregion
