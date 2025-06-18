@@ -10,7 +10,7 @@ junit = "4.13.2"
 lifecycle-runtime-ktx = "2.7.0"
 material3 = "1.2.0"
 mistica = "13.4.0"
-compose-version = "1.8.0-alpha01"
+compose-version = "1.7.6"
 navigation-compose = "2.8.0-beta07"
 kotlin = "2.0.0"
 

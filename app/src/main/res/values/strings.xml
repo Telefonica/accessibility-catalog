@@ -2,9 +2,18 @@
     <string name="app_name">Catálgo de accesibilidad</string>
 
     <!-- Common -->
+    <string name="related_link_android_documentation">Documentación Android</string>
+    <string name="related_link_android_code_lab">Tutorial Android</string>
+    <string name="related_link_magenta" translatable="false">Magenta</string>
+    <string name="related_link_telefonica" translatable="false">Telefónica</string>
+
     <string name="implementation_text">Implementación</string>
     <string name="xml_views_implementation_title">Vistas en XML</string>
     <string name="compose_implementation_title" translatable="false">Compose</string>
+    <string name="implementation_see_source_code">Ver código fuente</string>
+    <string name="implementation_no_accessibility_service_callout_title">Sin servicio de accesibilidad</string>
+    <string name="implementation_no_accessibility_service_callout_description">Activa un servicio de accessibilidad (ej: TalkBack) para probar los ejemplos de esta página.</string>
+    <string name="implementation_no_accessibility_service_callout_button">Gestionar servicios</string>
 
     <!-- Sections -->
     <string name="abstract_section_title">General</string>
@@ -22,20 +31,40 @@
     <string name="touch_target_requirement_space_between">Los elementos clicables deben tener una separación mínima de 8dp entre ellos.</string>
     <string name="touch_target_requirement_custom_announcement">El elemento clicable puede anunciar un texto personalizado que indique el efecto de la acción.\nPor ejemplo: \'Toca dos veces para [ guardar | abrir | cerrar | … ]\'.</string>
 
-    <string name="touch_target_related_link_1_name">Documentación Android</string>
-    <string name="touch_target_related_link_1" translatable="false">https://support.google.com/accessibility/android/answer/7101858</string>
-
     <string name="touch_target_related_link_2_name" translatable="false">Material Design</string>
-    <string name="touch_target_related_link_2" translatable="false">https://m2.material.io/design/layout/spacing-methods.html#touch-targets</string>
 
-    <string name="touch_target_related_link_3_name" translatable="false">Magenta</string>
-    <string name="touch_target_related_link_3" translatable="false">https://www.magentaa11y.com/checklist-native/button</string>
+    <string name="touch_target_implementation_touch_delegate_title">Usando Touch Delegate</string>
+    <string name="touch_target_implementation_wrapped_container_title">Envuelto en un contenedor</string>
+    <string name="touch_target_implementation_custom_tap_announcement_title">Anuncio de acción personalizada</string>
+    <string name="touch_target_implementation_small_button">Botón pequeño</string>
+    <string name="touch_target_implementation_small_chip">Etiqueta pequeña</string>
+    <string name="touch_target_implementation_small_icon">Botón de icono pequeño</string>
+    <string name="touch_target_implementation_feedback_clicked">Elemento pulsado</string>
+    <string name="touch_target_implementation_send_button_text">Enviar correo</string>
+    <string name="touch_target_implementation_send_button_action">enviar</string>
+    <string name="touch_target_implementation_filter_chip_text">Mi filtro</string>
+    <string name="touch_target_implementation_filter_chip_action">filtrar</string>
+    <string name="touch_target_implementation_close_image_button_text">Cerrar ventana</string>
+    <string name="touch_target_implementation_close_image_button_action">cerrar</string>
 
     <!-- Headings -->
     <string name="headings_title_section">Encabezados</string>
+    <string name="headings_abstract">Las pantallas que muestran mucho texto o información pueden resultar difíciles de navegar para usuarios con discapacidad visual.
+        \n\nImplementar indicadores claros de encabezados permite una navegación más rápida a través del contenido utilizando gestos de deslizamiento, mejorando la accesibilidad y la experiencia general del usuario.</string>
+    
+    <string name="headings_requirement_section_principle">Separa la información en secciones claras.</string>
+    <string name="headings_requirement_avoid_in_list">Evita utilizar encabezados dentro de listas.</string>
+
+    <string name="headings_implementation_example_one">Encabezado 1</string>
+    <string name="headings_implementation_example_two">Encabezado 2</string>
 
     <!-- Toggleables -->
-    <string name="toggleables_title_section">Toggleables</string>
+    <string name="toggleables_title_section">Interruptores</string>
+    <string name="toggleables_abstract">Los interruptores son elementos de pantalla que permite al usuario alternar entre dos estados distintos, generalmente "activado" y "desactivado" o "seleccionado" y "no seleccionado".
+        \n\nEsta categoría abarca principalmente componentes como interruptores y casillas de verificación, cuyos estados se pueden cambiar fácilmente con una simple interacción.</string>
+
+    <string name="toggleables_requirement_single_focus">Usa un único foco para los elementos asociados al interruptor.</string>
+    <string name="toggleables_requirement_semantic_context">Procura usar semánticas para dar un contexto claro de la acción del interruptor</string>
 
     <string name="toggleables_implementation_android_switch_text">Componente Switch de Android</string>
     <string name="toggleables_implementation_custom_title">Personalizar anuncios</string>

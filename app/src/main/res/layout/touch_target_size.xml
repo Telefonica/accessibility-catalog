@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--region Using Touch Delegate -->
+    <com.telefonica.mistica.title.TitleView
+        android:id="@+id/touch_delegate_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/touch_target_implementation_touch_delegate_title"
+        app:titleStyle="title1" />
+
+    <LinearLayout
+        android:id="@+id/touch_delegate_linear_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/touch_delegate_title">
+
+        <Button
+            android:id="@+id/touch_delegate_small_button"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:backgroundTint="@color/telefonica_color_telefonicaBlue"
+            android:text="@string/touch_target_implementation_small_button"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+
+        <Space
+            android:layout_width="12dp"
+            android:layout_height="match_parent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/touch_delegate_small_chip"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/telefonica_color_telefonicaBlue10"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="@string/touch_target_implementation_small_chip"
+            android:textColor="@color/telefonica_color_telefonicaBlue"
+            android:textSize="12sp" />
+
+        <Space
+            android:layout_width="12dp"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/touch_delegate_small_icon_button"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:contentDescription="@string/touch_target_implementation_small_icon"
+            android:src="@drawable/baseline_close_24"
+            app:tint="@android:color/black" />
+    </LinearLayout>
+    <!--endregion-->
+
+    <!--region Wrapped container -->
+    <com.telefonica.mistica.title.TitleView
+        android:id="@+id/wrapped_container_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/touch_delegate_linear_container"
+        app:title="@string/touch_target_implementation_wrapped_container_title"
+        app:titleStyle="title1" />
+
+    <LinearLayout
+        android:id="@+id/wrapped_linear_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wrapped_container_title">
+
+        <com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.touchtarget.ButtonWrapperView
+            android:id="@+id/button_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/touch_target_implementation_small_button"
+            android:minWidth="48dp"
+            android:minHeight="48dp">
+
+            <Button
+                android:id="@+id/wrapped_small_button"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/telefonica_color_telefonicaBlue"
+                android:clickable="false"
+                android:importantForAccessibility="no"
+                android:text="@string/touch_target_implementation_small_button"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+        </com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.touchtarget.ButtonWrapperView>
+
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="match_parent" />
+
+        <com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.touchtarget.ChipWrapperView
+            android:id="@+id/chip_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/touch_target_implementation_small_chip"
+            android:minWidth="48dp"
+            android:minHeight="48dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/wrapped_small_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/telefonica_color_telefonicaBlue10"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:importantForAccessibility="no"
+                android:text="@string/touch_target_implementation_small_chip"
+                android:textColor="@color/telefonica_color_telefonicaBlue"
+                android:textSize="12sp" />
+        </com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.touchtarget.ChipWrapperView>
+
+        <Space
+            android:layout_width="12dp"
+            android:layout_height="match_parent" />
+
+        <com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.touchtarget.ImageWrapperView
+            android:id="@+id/icon_button_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:contentDescription="@string/touch_target_implementation_small_icon"
+            android:minWidth="48dp"
+            android:minHeight="48dp">
+
+            <ImageView
+                android:id="@+id/wrapped_small_icon_button"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center"
+                android:importantForAccessibility="no"
+                android:src="@drawable/baseline_close_24"
+                app:tint="@android:color/black" />
+        </com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.touchtarget.ImageWrapperView>
+
+    </LinearLayout>
+    <!--endregion-->
+
+    <!--region Custom tap announcement -->
+    <com.telefonica.mistica.title.TitleView
+        android:id="@+id/custom_announcement_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wrapped_linear_container"
+        app:title="@string/touch_target_implementation_custom_tap_announcement_title"
+        app:titleStyle="title1" />
+
+    <LinearLayout
+        android:id="@+id/custom_announcement_title_linear_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingHorizontal="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/custom_announcement_title">
+
+        <Button
+            android:id="@+id/custom_announcement_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:backgroundTint="@color/telefonica_color_telefonicaBlue"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:text="@string/touch_target_implementation_send_button_text"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="match_parent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/custom_announcement_chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/telefonica_color_telefonicaBlue10"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:text="@string/touch_target_implementation_filter_chip_text"
+            android:textColor="@color/telefonica_color_telefonicaBlue"
+            android:textSize="14sp" />
+
+        <Space
+            android:layout_width="12dp"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/custom_announcement_icon_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:contentDescription="@string/touch_target_implementation_close_image_button_text"
+            android:src="@drawable/baseline_close_24"
+            app:tint="@android:color/black" />
+
+    </LinearLayout>
+    <!--endregion-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

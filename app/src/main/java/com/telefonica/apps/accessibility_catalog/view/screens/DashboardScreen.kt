@@ -79,7 +79,7 @@ fun DashboardScreen(
                 HorizontalDivider()
                 ListRowItem(
                     listRowIcon = ListRowIcon.NormalIcon(
-                        painter = painterResource(id = R.drawable.ic_clickable_areas),
+                        painter = painterResource(id = element.iconResId),
                         tint = Color.Unspecified,
                     ),
                     title = stringResource(id = element.nameResId),

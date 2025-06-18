@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Touch target -->
+    <string name="touch_target_related_link_1" translatable="false">https://support.google.com/accessibility/android/answer/7101858</string>
+    <string name="touch_target_related_link_2" translatable="false">https://m2.material.io/design/layout/spacing-methods.html#touch-targets</string>
+    <string name="touch_target_related_link_3" translatable="false">https://www.magentaa11y.com/checklist-native/button</string>
+
+    <string name="touch_target_implementation_xml_documentation_url" translatable="false">https://github.com/Telefonica/accessibility-catalog/blob/HEAD/app/src/main/java/com/telefonica/apps/accessibility_catalog/view/screens/implementations/views/touchtarget</string>
+    <string name="touch_target_implementation_compose_documentation_url" translatable="false">https://github.com/Telefonica/accessibility-catalog/blob/HEAD/app/src/main/java/com/telefonica/apps/accessibility_catalog/view/screens/implementations/compose/touchtarget</string>
+
+    <!-- Headings -->
+    <string name="headings_related_link_1" translatable="false">https://developer.android.com/guide/topics/ui/accessibility/principles#headings_within_text</string>
+    <string name="headings_related_link_2" translatable="false">https://www.magentaa11y.com/checklist-native/headings/#android</string>
+
+    <string name="headings_implementation_xml_documentation_url" translatable="false">https://github.com/Telefonica/accessibility-catalog/blob/HEAD/app/src/main/java/com/telefonica/apps/accessibility_catalog/view/screens/implementations/views/headings</string>
+    <string name="headings_implementation_compose_documentation_url" translatable="false">https://github.com/Telefonica/accessibility-catalog/blob/HEAD/app/src/main/java/com/telefonica/apps/accessibility_catalog/view/screens/implementations/compose/headings</string>
+
+    <!-- Toggleables -->
+    <string name="toggleables_related_link_1" translatable="false">https://engineering.telefonica.com/improve-your-android-accessibility-with-toggleables-fe5a02601e81</string>
+    <string name="toggleables_related_link_2" translatable="false">https://developer.android.com/codelabs/jetpack-compose-accessibility?hl=es-419#8</string>
+    <string name="toggleables_related_link_3" translatable="false">https://www.magentaa11y.com/checklist-native/toggle-switch/</string>
+
+    <string name="toggleables_implementation_xml_documentation_url" translatable="false">https://github.com/Telefonica/accessibility-catalog/blob/HEAD/app/src/main/java/com/telefonica/apps/accessibility_catalog/view/screens/implementations/views/toggleables</string>
+    <string name="toggleables_implementation_compose_documentation_url" translatable="false">https://github.com/Telefonica/accessibility-catalog/blob/HEAD/app/src/main/java/com/telefonica/apps/accessibility_catalog/view/screens/implementations/compose/toggleables</string>
+</resources>

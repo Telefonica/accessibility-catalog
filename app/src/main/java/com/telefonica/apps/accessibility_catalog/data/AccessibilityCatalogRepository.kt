@@ -16,6 +16,7 @@ class AccessibilityCatalogRepository @Inject constructor(
             DashboardElement(
                 id = it.id,
                 nameResId = it.nameResId,
+                iconResId = it.iconResId,
             )
         }
 

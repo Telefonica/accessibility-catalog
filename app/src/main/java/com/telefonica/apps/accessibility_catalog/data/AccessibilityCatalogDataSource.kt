@@ -1,17 +1,16 @@
 package com.telefonica.apps.accessibility_catalog.data
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.unit.dp
 import com.telefonica.apps.accessibility_catalog.R
 import com.telefonica.apps.accessibility_catalog.view.models.AccessibilityElement
-import com.telefonica.apps.accessibility_catalog.view.models.RelatedLink
+import com.telefonica.apps.accessibility_catalog.view.models.TextLink
 import com.telefonica.apps.accessibility_catalog.view.screens.common.AndroidViewImplementation
+import com.telefonica.apps.accessibility_catalog.view.screens.common.ComposeImplementation
+import com.telefonica.apps.accessibility_catalog.view.screens.implementations.compose.headings.Headings
+import com.telefonica.apps.accessibility_catalog.view.screens.implementations.compose.toggleables.ToggleablesCompose
+import com.telefonica.apps.accessibility_catalog.view.screens.implementations.compose.touchtarget.TouchTarget
+import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.headings.HeadingsView
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.toggleables.ToggleablesView
+import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.touchtarget.TouchTargetView
 import java.util.UUID
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -24,6 +23,7 @@ class AccessibilityCatalogDataSource @Inject constructor() {
         AccessibilityElement(
             id = UUID.randomUUID(),
             nameResId = R.string.touch_target_title_section,
+            iconResId = R.drawable.ic_touch_target,
             abstractResId = R.string.touch_target_abstract,
             requirementsResId = listOf(
                 R.string.touch_target_requirement_touch_target,
@@ -31,22 +31,32 @@ class AccessibilityCatalogDataSource @Inject constructor() {
                 R.string.touch_target_requirement_custom_announcement,
             ),
             relatedLinksResId = listOf(
-                RelatedLink(
+                TextLink(
                     url = R.string.touch_target_related_link_1,
-                    nameResId = R.string.touch_target_related_link_1_name
+                    nameResId = R.string.related_link_android_documentation
                 ),
-                RelatedLink(
+                TextLink(
                     url = R.string.touch_target_related_link_2,
                     nameResId = R.string.touch_target_related_link_2_name
                 ),
-                RelatedLink(
+                TextLink(
                     url = R.string.touch_target_related_link_3,
-                    nameResId = R.string.touch_target_related_link_3_name
+                    nameResId = R.string.related_link_magenta
                 ),
             ),
-            xmlViewImplementation = null, // todo
+            xmlViewImplementation = {
+                AndroidViewImplementation(
+                    factory = { context ->
+                        TouchTargetView(context = context)
+                    },
+                    documentationUrl = R.string.touch_target_implementation_xml_documentation_url
+                )
+            },
             composeImplementation = {
-                // todo
+                ComposeImplementation(
+                    composable = { TouchTarget() },
+                    documentationUrl = R.string.touch_target_implementation_compose_documentation_url
+                )
             },
         ),
         //endregion
@@ -55,12 +65,35 @@ class AccessibilityCatalogDataSource @Inject constructor() {
         AccessibilityElement(
             id = UUID.randomUUID(),
             nameResId = R.string.headings_title_section,
-            abstractResId = android.R.string.ok,
+            iconResId = R.drawable.ic_header,
+            abstractResId = R.string.headings_abstract,
+            requirementsResId = listOf(
+                R.string.headings_requirement_section_principle,
+                R.string.headings_requirement_avoid_in_list,
+            ),
+            relatedLinksResId = listOf(
+                TextLink(
+                    url = R.string.headings_related_link_1,
+                    nameResId = R.string.related_link_android_documentation,
+                ),
+                TextLink(
+                    url = R.string.headings_related_link_2,
+                    nameResId = R.string.related_link_magenta,
+                )
+            ),
             xmlViewImplementation = {
-                // todo
+                AndroidViewImplementation(
+                    factory = { context ->
+                        HeadingsView(context = context)
+                    },
+                    documentationUrl = R.string.headings_implementation_xml_documentation_url
+                )
             },
             composeImplementation = {
-                // todo
+                ComposeImplementation(
+                    composable = { Headings() },
+                    documentationUrl = R.string.headings_implementation_compose_documentation_url
+                )
             },
         ),
         //endregion
@@ -69,19 +102,38 @@ class AccessibilityCatalogDataSource @Inject constructor() {
         AccessibilityElement(
             id = UUID.randomUUID(),
             nameResId = R.string.toggleables_title_section,
-            abstractResId = android.R.string.ok,
+            iconResId = R.drawable.ic_toggleable,
+            abstractResId = R.string.toggleables_abstract,
+            requirementsResId = listOf(
+                R.string.toggleables_requirement_single_focus,
+                R.string.toggleables_requirement_semantic_context,
+            ),
+            relatedLinksResId = listOf(
+                TextLink(
+                    url = R.string.toggleables_related_link_1,
+                    nameResId = R.string.related_link_telefonica,
+                ),
+                TextLink(
+                    url = R.string.toggleables_related_link_2,
+                    nameResId = R.string.related_link_android_code_lab,
+                ),
+                TextLink(
+                    url = R.string.toggleables_related_link_3,
+                    nameResId = R.string.related_link_magenta,
+                )
+            ),
             xmlViewImplementation = {
-                AndroidViewImplementation(factory = { context ->
-                    ToggleablesView(context = context)
-                })
+                AndroidViewImplementation(
+                    factory = { context ->
+                        ToggleablesView(context = context)
+                    },
+                    documentationUrl = R.string.toggleables_implementation_xml_documentation_url
+                )
             },
             composeImplementation = {
-                // todo
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(150.dp)
-                        .background(Color.Blue)
+                ComposeImplementation(
+                    composable = { ToggleablesCompose() },
+                    documentationUrl = R.string.toggleables_implementation_compose_documentation_url
                 )
             },
         ),

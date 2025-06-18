@@ -1,5 +1,6 @@
 package com.telefonica.apps.accessibility_catalog.view.models
 
+import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.compose.runtime.Composable
 import java.util.UUID
@@ -7,9 +8,10 @@ import java.util.UUID
 data class AccessibilityElement(
     val id: UUID,
     @StringRes val nameResId: Int,
+    @DrawableRes val iconResId: Int,
     @StringRes val abstractResId: Int,
     val requirementsResId: List<Int> = emptyList(),
-    val relatedLinksResId: List<RelatedLink> = emptyList(),
+    val relatedLinksResId: List<TextLink> = emptyList(),
     val xmlViewImplementation: (@Composable () -> Unit)?,
     val composeImplementation: (@Composable () -> Unit)?,
 )
@@ -17,6 +19,7 @@ data class AccessibilityElement(
 data class DashboardElement(
     val id: UUID,
     @StringRes val nameResId: Int,
+    @DrawableRes val iconResId: Int,
 )
 
 data class AccessibilityDetail(
@@ -24,7 +27,7 @@ data class AccessibilityDetail(
     @StringRes val nameResId: Int,
     @StringRes val abstractResId: Int,
     val requirementsResId: List<Int> = emptyList(),
-    val relatedLinksResId: List<RelatedLink> = emptyList(),
+    val relatedLinksResId: List<TextLink> = emptyList(),
 )
 
 data class AccessibilityImplementation(
@@ -32,7 +35,7 @@ data class AccessibilityImplementation(
     val composeImplementation: (@Composable () -> Unit)?,
 )
 
-data class RelatedLink(
+data class TextLink(
     @StringRes val url: Int,
     @StringRes val nameResId: Int,
 )

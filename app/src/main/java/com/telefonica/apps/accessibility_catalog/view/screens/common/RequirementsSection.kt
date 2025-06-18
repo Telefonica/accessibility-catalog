@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -52,7 +53,7 @@ fun RequirementsSection(
                             rowIndex = index,
                             rowSpan = 1,
                             columnIndex = 1,
-                            columnSpan = 1
+                            columnSpan = 1,
                         )
                     },
                     text = requirement,
