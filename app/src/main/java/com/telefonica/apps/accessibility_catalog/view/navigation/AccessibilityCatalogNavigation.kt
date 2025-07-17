@@ -5,7 +5,6 @@ import androidx.compose.animation.core.tween
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
@@ -14,7 +13,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.telefonica.apps.accessibility_catalog.view.screens.DashboardScreen
 import com.telefonica.apps.accessibility_catalog.view.screens.DetailScreen
-import com.telefonica.apps.accessibility_catalog.view.screens.ImplementationScreen
+import com.telefonica.apps.accessibility_catalog.view.screens.MyImplementationScreen
 import java.util.UUID
 
 private const val ID_ARGUMENT = "id_argument"
@@ -80,8 +79,11 @@ fun AccessibilityCatalogNavHost(
             exitTransition = { slideOutVertically(targetOffsetY = { 1800 }) },
         ) { navBackStackEntry ->
             val idArgument = navBackStackEntry.arguments?.getString(ID_ARGUMENT)
-            ImplementationScreen(
+            MyImplementationScreen(
                 elementId = UUID.fromString(idArgument),
+                onCloseClick = {
+                    navController.navigateUp()
+                }
             )
         }
     }

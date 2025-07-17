@@ -41,10 +41,10 @@ import java.util.UUID
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ImplementationScreen(
+fun MyImplementationScreen(
     elementId: UUID,
     viewModel: ImplementationViewModel = hiltViewModel(),
-    // onCloseClick: () -> Unit,
+    onCloseClick: () -> Unit,
 ) {
     val context = LocalContext.current
 
@@ -68,7 +68,7 @@ fun ImplementationScreen(
                         )
                     },
                     navigationIcon = {
-                        IconButton(onClick = { println("Click") }) {
+                        IconButton(onClick = onCloseClick) {
                             Icon(
                                 imageVector = Icons.Filled.Close,
                                 contentDescription = stringResource(id = R.string.accessibility_close_button)
