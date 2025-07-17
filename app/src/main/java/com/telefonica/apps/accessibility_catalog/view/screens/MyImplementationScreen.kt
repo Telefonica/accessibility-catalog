@@ -41,7 +41,7 @@ import java.util.UUID
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ImplementationScreen(
+fun MyImplementationScreen(
     elementId: UUID,
     viewModel: ImplementationViewModel = hiltViewModel(),
     onCloseClick: () -> Unit,
