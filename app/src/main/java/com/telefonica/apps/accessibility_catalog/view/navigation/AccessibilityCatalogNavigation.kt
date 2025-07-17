@@ -82,6 +82,9 @@ fun AccessibilityCatalogNavHost(
             val idArgument = navBackStackEntry.arguments?.getString(ID_ARGUMENT)
             ImplementationScreen(
                 elementId = UUID.fromString(idArgument),
+                onCloseClick = {
+                    navController.navigateUp()
+                }
             )
         }
     }
