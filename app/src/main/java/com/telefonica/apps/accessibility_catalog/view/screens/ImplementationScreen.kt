@@ -44,7 +44,7 @@ import java.util.UUID
 fun ImplementationScreen(
     elementId: UUID,
     viewModel: ImplementationViewModel = hiltViewModel(),
-    onCloseClick: () -> Unit,
+    // onCloseClick: () -> Unit,
 ) {
     val context = LocalContext.current
 
@@ -68,7 +68,7 @@ fun ImplementationScreen(
                         )
                     },
                     navigationIcon = {
-                        IconButton(onClick = onCloseClick) {
+                        IconButton(onClick = { println("Click") }) {
                             Icon(
                                 imageVector = Icons.Filled.Close,
                                 contentDescription = stringResource(id = R.string.accessibility_close_button)
