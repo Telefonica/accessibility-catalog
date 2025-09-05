@@ -74,4 +74,55 @@
     <string name="accessibility_checkbox_turn_on_action">turn on</string>
     <string name="accessibility_checkbox_turn_off_action">turn off</string>
 
+    <!-- Content Descriptions -->
+    <string name="content_descriptions_title_section">Content Descriptions</string>
+    <string name="content_descriptions_abstract">Content descriptions provide alternative textual information for visual elements such as images, icons, and other graphic components.
+
+        These descriptions are essential for users who rely on assistive technologies like TalkBack, as they help convey the purpose and content of non-textual elements.
+
+        A good content description should be clear, concise, and contextually relevant.</string>
+    <string name="content_descriptions_requirement_meaningful_descriptions">Provide meaningful descriptions that explain the purpose of the element.</string>
+    <string name="content_descriptions_requirement_avoid_redundancy">Avoid redundancy with text already visible on the screen.</string>
+    <string name="content_descriptions_requirement_context_aware">Adapt descriptions to the context and current state of the element.</string>
+    <string name="content_descriptions_requirement_decorative_images">Omit descriptions for purely decorative images.</string>
+    <string name="content_descriptions_implementation_informative_image">Informative image</string>
+    <string name="content_descriptions_implementation_actionable_icon">Actionable icon</string>
+    <string name="content_descriptions_implementation_decorative_image">Decorative image</string>
+    <string name="content_descriptions_implementation_complex_graphic">Complex graphic</string>
+    <string name="content_descriptions_implementation_weather_description">Sunny weather with a temperature of 30 degrees</string>
+    <string name="content_descriptions_implementation_profile_description">User profile photo</string>
+    <string name="content_descriptions_implementation_chart_description">Bar chart showing sales per quarter</string>
+    <string name="content_descriptions_implementation_delete_button">Delete item</string>
+    <string name="content_descriptions_implementation_share_button">Share content</string>
+    <string name="content_descriptions_informative_title">Informative Images</string>
+    <string name="content_descriptions_actionable_title">Actionable Icons</string>
+    <string name="content_descriptions_decorative_title">Decorative Elements</string>
+    <string name="content_descriptions_complex_title">Complex Graphics</string>
+    <string name="content_descriptions_contextual_title">Contextual Descriptions</string>
+    <string name="content_descriptions_interactive_title">Interactive Components</string>
+    <string name="content_descriptions_profile_picture">Profile picture of Maria Gonzalez</string>
+    <string name="content_descriptions_close_dialog">Close dialog</string>
+    <string name="content_descriptions_add_to_favorites">Add to favorites</string>
+    <string name="content_descriptions_rating_4_out_of_5">Rating: 4 out of 5 stars</string>
+    <string name="content_descriptions_status_online">Status: Online</string>
+    <string name="content_descriptions_article_card">Article: Article title. Preview text. Tap to read more.</string>
+    <string name="content_descriptions_informative_explanation">Example of an informative image with a meaningful description for assistive technology users.</string>
+    <string name="content_descriptions_actionable_explanation">Example of an actionable icon with a description indicating the action it performs.</string>
+    <string name="content_descriptions_decorative_explanation">Example of a decorative image without a description, as it does not provide relevant information.</string>
+    <string name="content_descriptions_redundancy_title">Avoid Redundancy</string>
+    <string name="content_descriptions_redundancy_explanation">Do not repeat information already visible on screen in the content description.</string>
+    <string name="content_descriptions_redundancy_incorrect_explanation">The screen reader will announce twice: \'Delete item\'. This is redundant and may confuse the user.</string>
+    <string name="content_descriptions_redundancy_correct_explanation">The screen reader will announce only once: \'Delete item\'. This is clear and not redundant.</string>
+    <string name="content_descriptions_contextual_explanation">Adapt the description to the current state or context of the element for greater clarity.</string>
+    <string name="content_descriptions_status_online_label">Online</string>
+    <string name="content_descriptions_incorrect">Incorrect</string>
+    <string name="content_descriptions_correct">Correct</string>
+    <string name="content_descriptions_phone_number_title">Phone Number Accessibility</string>
+    <string name="content_descriptions_phone_number_explanation">Screen readers may read phone numbers as a long number, which can be confusing. Using a content description with spaces between digits ensures it is read digit by digit.</string>
+    <string name="content_descriptions_phone_number_incorrect_label">Incorrect</string>
+    <string name="content_descriptions_phone_number_correct_label">Correct</string>
+    <string name="content_descriptions_phone_number_incorrect_explanation">The screen reader will read the number as a long number.</string>
+    <string name="content_descriptions_phone_number_correct_explanation">The screen reader will read the number digit by digit.</string>
+    <string name="content_descriptions_phone_number_raw">656787434</string>
+    <string name="content_descriptions_phone_number_spaced">6 5 6 7 8 7 4 3 4</string>
 </resources>

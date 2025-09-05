@@ -78,4 +78,57 @@
     <string name="accessibility_checkbox_turn_on_action">activar</string>
     <string name="accessibility_checkbox_turn_off_action">desactivar</string>
 
+    <!-- Content Descriptions -->
+    <string name="content_descriptions_title_section">Descripciones de contenido</string>
+    <string name="content_descriptions_abstract">Las descripciones de contenido proporcionan información textual alternativa para elementos visuales como imágenes, iconos y otros componentes gráficos.
+
+        Esas descripciones son fundamentales para usuarios que utilizan tecnologías de asistencia como TalkBack, ya que permiten comprender el propósito y contenido de elementos no textuales.
+
+        Una buena descripción de contenido debe ser clara, concisa y contextualmente relevante.</string>
+    <string name="content_descriptions_requirement_meaningful_descriptions">Proporciona descripciones significativas que expliquen el propósito del elemento.</string>
+    <string name="content_descriptions_requirement_avoid_redundancy">Evita redundancia con el texto ya visible en pantalla.</string>
+    <string name="content_descriptions_requirement_context_aware">Adapta las descripciones al contexto y estado actual del elemento.</string>
+    <string name="content_descriptions_requirement_decorative_images">Omite descripciones para imágenes puramente decorativas.</string>
+    <string name="content_descriptions_implementation_informative_image">Imagen informativa</string>
+    <string name="content_descriptions_implementation_actionable_icon">Icono accionable</string>
+    <string name="content_descriptions_implementation_decorative_image">Imagen decorativa</string>
+    <string name="content_descriptions_implementation_complex_graphic">Gráfico complejo</string>
+    <string name="content_descriptions_implementation_weather_description">Clima soleado con temperatura de 30 grados</string>
+    <string name="content_descriptions_implementation_profile_description">Foto de perfil de usuario</string>
+    <string name="content_descriptions_implementation_chart_description">Gráfico de barras mostrando ventas por trimestre</string>
+    <string name="content_descriptions_implementation_delete_button">Eliminar elemento</string>
+    <string name="content_descriptions_implementation_share_button">Compartir contenido</string>
+    <string name="content_descriptions_informative_title">Imágenes Informativas</string>
+    <string name="content_descriptions_actionable_title">Iconos Accionables</string>
+    <string name="content_descriptions_decorative_title">Elementos Decorativos</string>
+    <string name="content_descriptions_complex_title">Gráficos Complejos</string>
+    <string name="content_descriptions_contextual_title">Descripciones Contextuales</string>
+    <string name="content_descriptions_interactive_title">Componentes Interactivos</string>
+    <string name="content_descriptions_profile_picture">Foto de perfil de María González</string>
+    <string name="content_descriptions_close_dialog">Cerrar diálogo</string>
+    <string name="content_descriptions_add_to_favorites">Agregar a favoritos</string>
+    <string name="content_descriptions_rating_4_out_of_5">Calificación: 4 de 5 estrellas</string>
+    <string name="content_descriptions_status_online">Estado: En línea</string>
+    <string name="content_descriptions_article_card">Artículo: Título del artículo. Vista previa del texto. Tocar para leer más.</string>
+    <string name="content_descriptions_informative_explanation">Ejemplo de imagen informativa con descripción significativa para usuarios de tecnologías de asistencia.</string>
+    <string name="content_descriptions_actionable_explanation">Ejemplo de icono accionable con descripción que indica la acción que realiza.</string>
+    <string name="content_descriptions_decorative_explanation">Ejemplo de imagen decorativa sin descripción, ya que no aporta información relevante.</string>
+    <string name="content_descriptions_redundancy_title">Evitar Redundancia</string>
+    <string name="content_descriptions_redundancy_explanation">No repitas información que ya está visible en pantalla en la descripción de contenido.</string>
+    <string name="content_descriptions_redundancy_incorrect_explanation">El lector de pantalla anunciará dos veces: &quot;Eliminar elemento&quot;. Esto es redundante y puede confundir al usuario.</string>
+    <string name="content_descriptions_redundancy_correct_explanation">El lector de pantalla solo anunciará una vez: &quot;Eliminar elemento&quot;. Esto es claro y no redundante.</string>
+    <string name="content_descriptions_contextual_explanation">Adapta la descripción al estado o contexto actual del elemento para mayor claridad.</string>
+    <string name="content_descriptions_status_online_label">En línea</string>
+    <string name="content_descriptions_incorrect">Incorrecto</string>
+    <string name="content_descriptions_correct">Correcto</string>
+
+    <!-- Phone Number Accessibility -->
+    <string name="content_descriptions_phone_number_title">Accesibilidad de números de teléfono</string>
+    <string name="content_descriptions_phone_number_explanation">Los lectores de pantalla pueden leer los números de teléfono como una cifra larga, lo que puede resultar confuso. Usar una descripción de contenido con espacios entre los dígitos permite que se lea número por número.</string>
+    <string name="content_descriptions_phone_number_incorrect_label">Incorrecto</string>
+    <string name="content_descriptions_phone_number_correct_label">Correcto</string>
+    <string name="content_descriptions_phone_number_incorrect_explanation">El lector de pantalla leerá el número como una cifra larga.</string>
+    <string name="content_descriptions_phone_number_correct_explanation">El lector de pantalla leerá el número dígito por dígito.</string>
+    <string name="content_descriptions_phone_number_raw">656787434</string>
+    <string name="content_descriptions_phone_number_spaced">6 5 6 7 8 7 4 3 4</string>
 </resources>

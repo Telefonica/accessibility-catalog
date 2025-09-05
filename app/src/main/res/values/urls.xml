@@ -22,4 +22,11 @@
 
     <string name="toggleables_implementation_xml_documentation_url" translatable="false">https://github.com/Telefonica/accessibility-catalog/blob/HEAD/app/src/main/java/com/telefonica/apps/accessibility_catalog/view/screens/implementations/views/toggleables</string>
     <string name="toggleables_implementation_compose_documentation_url" translatable="false">https://github.com/Telefonica/accessibility-catalog/blob/HEAD/app/src/main/java/com/telefonica/apps/accessibility_catalog/view/screens/implementations/compose/toggleables</string>
+
+    <!-- Content Descriptions -->
+    <string name="content_descriptions_related_link_1" translatable="false">https://developer.android.com/guide/topics/ui/accessibility/apps#describe-ui-element</string>
+    <string name="content_descriptions_related_link_2" translatable="false">https://www.magentaa11y.com/native-criteria/patterns/image-decorative</string>
+
+    <string name="content_descriptions_implementation_xml_documentation_url" translatable="false">https://github.com/Telefonica/accessibility-catalog/blob/HEAD/app/src/main/java/com/telefonica/apps/accessibility_catalog/view/screens/implementations/views/contentdescriptions</string>
+    <string name="content_descriptions_implementation_compose_documentation_url" translatable="false">https://github.com/Telefonica/accessibility-catalog/blob/HEAD/app/src/main/java/com/telefonica/apps/accessibility_catalog/view/screens/implementations/compose/contentdescriptions</string>
 </resources>

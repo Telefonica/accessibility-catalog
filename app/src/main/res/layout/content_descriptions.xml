@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_large">
+
+    <!-- 1. Meaningful description (Informative image) -->
+    <TextView
+        android:id="@+id/informative_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/content_descriptions_informative_title"
+        android:textAppearance="@android:style/TextAppearance.Material.Headline" />
+    <TextView
+        android:id="@+id/informative_explanation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/content_descriptions_informative_explanation"
+        android:textAppearance="@android:style/TextAppearance.Material.Body1" />
+    <ImageView
+        android:id="@+id/informative_image"
+        android:layout_width="@dimen/image_size_large"
+        android:layout_height="@dimen/image_size_large"
+        android:src="@drawable/sunnyweather"
+        android:contentDescription="@string/content_descriptions_implementation_weather_description"
+        android:layout_marginBottom="@dimen/margin_large" />
+
+    <!-- 2. Actionable icon (Context-aware/action description) -->
+    <TextView
+        android:id="@+id/actionable_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/content_descriptions_actionable_title"
+        android:textAppearance="@android:style/TextAppearance.Material.Headline" />
+    <TextView
+        android:id="@+id/actionable_explanation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/content_descriptions_actionable_explanation"
+        android:textAppearance="@android:style/TextAppearance.Material.Body1" />
+    <ImageView
+        android:id="@+id/actionable_icon"
+        android:layout_width="@dimen/touch_target_min_size"
+        android:layout_height="@dimen/touch_target_min_size"
+        android:src="@drawable/baseline_close_24"
+        android:contentDescription="@string/content_descriptions_implementation_delete_button"
+        android:background="@android:drawable/btn_default"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_marginBottom="@dimen/margin_large" />
+
+    <!-- 3. Decorative image (no content description) -->
+    <TextView
+        android:id="@+id/decorative_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/content_descriptions_decorative_title"
+        android:textAppearance="@android:style/TextAppearance.Material.Headline" />
+    <TextView
+        android:id="@+id/decorative_explanation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/content_descriptions_decorative_explanation"
+        android:textAppearance="@android:style/TextAppearance.Material.Body1" />
+    <ImageView
+        android:id="@+id/decorative_image"
+        android:layout_width="@dimen/image_size_small"
+        android:layout_height="@dimen/image_size_small"
+        android:src="@drawable/black_dot"
+        android:contentDescription="@null"
+        android:layout_marginBottom="@dimen/margin_large" />
+
+    <!-- 4. Complex graphic (context-aware/meaningful description) -->
+    <TextView
+        android:id="@+id/complex_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/content_descriptions_complex_title"
+        android:textAppearance="@android:style/TextAppearance.Material.Headline" />
+    <TextView
+        android:id="@+id/complex_explanation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/content_descriptions_implementation_chart_description"
+        android:textAppearance="@android:style/TextAppearance.Material.Body1" />
+    <ImageView
+        android:id="@+id/complex_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/sales_per_quarter"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/content_descriptions_implementation_chart_description"
+        android:layout_marginBottom="@dimen/margin_large" />
+
+    <!-- 5. Redundancy avoidance (bad and good example) -->
+    <TextView
+        android:id="@+id/redundancy_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/content_descriptions_redundancy_title"
+        android:textAppearance="@android:style/TextAppearance.Material.Headline" />
+    <TextView
+        android:id="@+id/redundancy_explanation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/content_descriptions_redundancy_explanation"
+        android:textAppearance="@android:style/TextAppearance.Material.Body1" />
+    <!-- Incorrect example -->
+    <TextView
+        android:id="@+id/redundancy_incorrect_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/content_descriptions_incorrect"
+        android:textAppearance="@android:style/TextAppearance.Material.Small" />
+    <LinearLayout
+        android:id="@+id/redundancy_incorrect_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <ImageView
+            android:id="@+id/redundancy_incorrect_x"
+            android:layout_width="@dimen/touch_target_min_size"
+            android:layout_height="@dimen/touch_target_min_size"
+            android:src="@drawable/baseline_close_24"
+            android:contentDescription="@string/content_descriptions_implementation_delete_button" />
+        <TextView
+            android:id="@+id/redundancy_incorrect_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/content_descriptions_implementation_delete_button"
+            android:contentDescription="@string/content_descriptions_implementation_delete_button"
+            android:textAppearance="@android:style/TextAppearance.Material.Body1" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/redundancy_incorrect_explanation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/content_descriptions_redundancy_incorrect_explanation"
+        android:textAppearance="@android:style/TextAppearance.Material.Small" />
+    <!-- Correct example -->
+    <TextView
+        android:id="@+id/redundancy_correct_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/content_descriptions_correct"
+        android:textAppearance="@android:style/TextAppearance.Material.Small" />
+    <LinearLayout
+        android:id="@+id/redundancy_correct_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:focusable="true"
+        android:clickable="true"
+        android:importantForAccessibility="yes"
+        android:contentDescription="@string/content_descriptions_implementation_delete_button"
+        android:gravity="center_vertical">
+        <ImageView
+            android:id="@+id/redundancy_correct_x"
+            android:layout_width="@dimen/touch_target_min_size"
+            android:layout_height="@dimen/touch_target_min_size"
+            android:src="@drawable/baseline_close_24"
+            android:contentDescription="@null" />
+        <TextView
+            android:id="@+id/redundancy_correct_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/content_descriptions_implementation_delete_button"
+            android:contentDescription="@null"
+            android:textAppearance="@android:style/TextAppearance.Material.Body1" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/redundancy_correct_explanation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/content_descriptions_redundancy_correct_explanation"
+        android:textAppearance="@android:style/TextAppearance.Material.Small" />
+
+    <!-- 6. Context-aware (status indicator) -->
+    <TextView
+        android:id="@+id/contextual_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/content_descriptions_contextual_title"
+        android:textAppearance="@android:style/TextAppearance.Material.Headline" />
+    <TextView
+        android:id="@+id/contextual_explanation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/content_descriptions_contextual_explanation"
+        android:textAppearance="@android:style/TextAppearance.Material.Body1" />
+    <LinearLayout
+        android:id="@+id/contextual_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/contextual_dot"
+            android:layout_width="@dimen/image_size_small"
+            android:layout_height="@dimen/image_size_small"
+            android:src="@drawable/black_dot"
+            android:contentDescription="@string/content_descriptions_status_online" />
+        <TextView
+            android:id="@+id/contextual_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/content_descriptions_status_online_label"
+            android:textAppearance="@android:style/TextAppearance.Material.Body1" />
+    </LinearLayout>
+
+    <!-- 7. Phone Number Accessibility -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/content_descriptions_phone_number_title"
+        android:textAppearance="@android:style/TextAppearance.Material.Headline"
+        android:layout_marginTop="24dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/content_descriptions_phone_number_explanation"
+        android:textAppearance="@android:style/TextAppearance.Material.Body1"
+        android:layout_marginBottom="8dp" />
+    <!-- Incorrect example -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/content_descriptions_phone_number_incorrect_label"
+        android:textAppearance="@android:style/TextAppearance.Material.Small"
+        android:layout_marginTop="8dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/content_descriptions_phone_number_raw"
+        android:textAppearance="@android:style/TextAppearance.Material.Body1" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/content_descriptions_phone_number_incorrect_explanation"
+        android:textAppearance="@android:style/TextAppearance.Material.Small"
+        android:layout_marginBottom="8dp" />
+    <!-- Correct example -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/content_descriptions_phone_number_correct_label"
+        android:textAppearance="@android:style/TextAppearance.Material.Small"
+        android:layout_marginTop="8dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/content_descriptions_phone_number_raw"
+        android:textAppearance="@android:style/TextAppearance.Material.Body1"
+        android:contentDescription="@string/content_descriptions_phone_number_spaced" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/content_descriptions_phone_number_correct_explanation"
+        android:textAppearance="@android:style/TextAppearance.Material.Small"
+        android:layout_marginBottom="8dp" />
+
+</LinearLayout>
