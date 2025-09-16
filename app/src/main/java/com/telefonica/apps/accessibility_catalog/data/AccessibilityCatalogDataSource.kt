@@ -5,9 +5,11 @@ import com.telefonica.apps.accessibility_catalog.view.models.AccessibilityElemen
 import com.telefonica.apps.accessibility_catalog.view.models.TextLink
 import com.telefonica.apps.accessibility_catalog.view.screens.common.AndroidViewImplementation
 import com.telefonica.apps.accessibility_catalog.view.screens.common.ComposeImplementation
+import com.telefonica.apps.accessibility_catalog.view.screens.implementations.compose.contentdescriptions.ContentDescriptionsCompose
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.compose.headings.Headings
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.compose.toggleables.ToggleablesCompose
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.compose.touchtarget.TouchTarget
+import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.contentdescriptions.ContentDescriptionsView
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.headings.HeadingsView
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.toggleables.ToggleablesView
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.touchtarget.TouchTargetView
@@ -134,6 +136,45 @@ class AccessibilityCatalogDataSource @Inject constructor() {
                 ComposeImplementation(
                     composable = { ToggleablesCompose() },
                     documentationUrl = R.string.toggleables_implementation_compose_documentation_url
+                )
+            },
+        ),
+        //endregion
+
+        //region Content Descriptions
+        AccessibilityElement(
+            id = UUID.randomUUID(),
+            nameResId = R.string.content_descriptions_title_section,
+            iconResId = R.drawable.ic_content_description,
+            abstractResId = R.string.content_descriptions_abstract,
+            requirementsResId = listOf(
+                R.string.content_descriptions_requirement_meaningful_descriptions,
+                R.string.content_descriptions_requirement_avoid_redundancy,
+                R.string.content_descriptions_requirement_context_aware,
+                R.string.content_descriptions_requirement_decorative_images,
+            ),
+            relatedLinksResId = listOf(
+                TextLink(
+                    url = R.string.content_descriptions_related_link_1,
+                    nameResId = R.string.related_link_android_documentation,
+                ),
+                TextLink(
+                    url = R.string.content_descriptions_related_link_2,
+                    nameResId = R.string.related_link_magenta,
+                ),
+            ),
+            xmlViewImplementation = {
+                AndroidViewImplementation(
+                    factory = { context ->
+                        ContentDescriptionsView(context = context)
+                    },
+                    documentationUrl = R.string.content_descriptions_implementation_xml_documentation_url
+                )
+            },
+            composeImplementation = {
+                ComposeImplementation(
+                    composable = { ContentDescriptionsCompose() },
+                    documentationUrl = R.string.content_descriptions_implementation_compose_documentation_url
                 )
             },
         ),
