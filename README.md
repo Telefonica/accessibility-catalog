@@ -1,6 +1,6 @@
 # Accessibility catalog
 
-This Android application serves as a practical guide for developers aiming to implement accessibility features in their apps. Through clear and concise examples, it explains the most important accessibility configurations, both for Jetpack Compose and classic view development.
+This Android application serves as a practical guide for developers aiming to implement accessibility features in their apps. Through clear and concise examples, it explains the most important accessibility (a11y) configurations, both for Jetpack Compose and classic view development.
 
 ## Key Features
 
