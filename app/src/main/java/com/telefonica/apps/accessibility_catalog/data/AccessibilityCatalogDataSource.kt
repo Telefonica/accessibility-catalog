@@ -7,10 +7,12 @@ import com.telefonica.apps.accessibility_catalog.view.screens.common.AndroidView
 import com.telefonica.apps.accessibility_catalog.view.screens.common.ComposeImplementation
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.compose.contentdescriptions.ContentDescriptionsCompose
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.compose.headings.Headings
+import com.telefonica.apps.accessibility_catalog.view.screens.implementations.compose.statedescriptions.StateDescriptions
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.compose.toggleables.ToggleablesCompose
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.compose.touchtarget.TouchTarget
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.contentdescriptions.ContentDescriptionsView
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.headings.HeadingsView
+import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.statedescriptions.StateDescriptionsView
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.toggleables.ToggleablesView
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.touchtarget.TouchTargetView
 import java.util.UUID
@@ -179,6 +181,30 @@ class AccessibilityCatalogDataSource @Inject constructor() {
             },
         ),
         //endregion
+
+        // region State Descriptions
+        AccessibilityElement(
+            id = UUID.randomUUID(),
+            nameResId = R.string.state_descriptions_title_section,
+            iconResId = R.drawable.ic_content_description, // TODO
+            abstractResId = R.string.state_descriptions_abstract,
+            requirementsResId = listOf(), // TODO
+            relatedLinksResId = listOf(), // TODO
+            xmlViewImplementation = {
+                AndroidViewImplementation(
+                    factory = { context ->
+                        StateDescriptionsView(context)
+                    },
+                    documentationUrl = R.string.state_descriptions_implementation_xml_documentation_url,
+                )
+            },
+            composeImplementation = {
+                ComposeImplementation(
+                    composable = { StateDescriptions() },
+                    documentationUrl = R.string.state_descriptions_implementation_compose_documentation_url,
+                )
+            }
+        )
     )
 
     fun getElements() = accessibilityElements

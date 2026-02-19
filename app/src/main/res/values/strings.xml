@@ -131,4 +131,8 @@
     <string name="content_descriptions_phone_number_correct_explanation">El lector de pantalla leerá el número dígito por dígito.</string>
     <string name="content_descriptions_phone_number_raw">656787434</string>
     <string name="content_descriptions_phone_number_spaced">6 5 6 7 8 7 4 3 4</string>
+
+    <!-- State descriptions -->
+    <string name="state_descriptions_title_section">Descripciones de estado</string>
+    <string name="state_descriptions_abstract">Las descripciones de estado son textos adicionales que proporcionan información sobre el estado actual de un elemento interactivo, como un interruptor o una casilla de verificación.</string>
 </resources>
