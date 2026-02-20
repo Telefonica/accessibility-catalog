@@ -182,7 +182,7 @@ class AccessibilityCatalogDataSource @Inject constructor() {
         ),
         //endregion
 
-        // region State Descriptions
+        //region State Descriptions
         AccessibilityElement(
             id = UUID.randomUUID(),
             nameResId = R.string.state_descriptions_title_section,
@@ -206,6 +206,7 @@ class AccessibilityCatalogDataSource @Inject constructor() {
             }
         )
     )
+    //endregion
 
     fun getElements() = accessibilityElements
 }
