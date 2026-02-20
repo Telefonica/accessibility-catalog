@@ -2,9 +2,7 @@ package com.telefonica.apps.accessibility_catalog.view.screens.implementations.c
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.selection.toggleable
 import androidx.compose.material3.Switch
@@ -68,6 +66,4 @@ private fun ExampleWithToggle() {
             onCheckedChange = null
         )
     }
-
-    Spacer(modifier = Modifier.height(24.dp))
 }
