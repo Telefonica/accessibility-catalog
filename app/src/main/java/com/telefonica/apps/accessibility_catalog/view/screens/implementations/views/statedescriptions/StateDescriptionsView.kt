@@ -4,11 +4,11 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
-import android.widget.TextView
+import android.widget.ImageButton
+import androidx.compose.ui.res.stringResource
 import androidx.core.view.ViewCompat
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
 import com.telefonica.apps.accessibility_catalog.R
-import com.telefonica.mistica.button.Button
 
 class StateDescriptionsView @JvmOverloads constructor(
     context: Context,
@@ -16,7 +16,7 @@ class StateDescriptionsView @JvmOverloads constructor(
     defStyle: Int = 0,
 ) : FrameLayout(context, attrs, defStyle) {
 
-    private lateinit var soundModeButton: Button
+    private lateinit var soundModeButton: ImageButton
     private var soundMode: SoundMode = SoundMode.SOUND
 
     init {
@@ -43,13 +43,13 @@ class StateDescriptionsView @JvmOverloads constructor(
             }
         )
 
-        val emoji = when (soundMode) {
-            SoundMode.SOUND -> "🔊"
-            SoundMode.VIBRATION -> "📳"
-            SoundMode.SILENCE -> "🔇"
+        val iconRes = when (soundMode) {
+            SoundMode.SOUND -> R.drawable.ic_volume_active
+            SoundMode.VIBRATION -> R.drawable.ic_volume_vibrate
+            SoundMode.SILENCE -> R.drawable.ic_volume_mute
         }
 
-        val text = resources.getString(
+        val contentDesc = resources.getString(
             when (soundMode) {
                 SoundMode.SOUND -> R.string.state_descriptions_implementation_change_to_vibration
                 SoundMode.VIBRATION -> R.string.state_descriptions_implementation_change_to_silence
@@ -57,8 +57,8 @@ class StateDescriptionsView @JvmOverloads constructor(
             }
         )
 
-        soundModeButton.contentDescription = text
-        soundModeButton.text = emoji
+        soundModeButton.setImageResource(iconRes)
+        soundModeButton.contentDescription = contentDesc
         ViewCompat.setStateDescription(soundModeButton, stateDesc)
 
         ViewCompat.replaceAccessibilityAction(

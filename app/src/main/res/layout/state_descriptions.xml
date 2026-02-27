@@ -15,12 +15,13 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp" />
 
-    <com.telefonica.mistica.button.Button
+    <ImageButton
         android:id="@+id/sound_mode_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="🔈"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        tools:src="@drawable/ic_volume_active" />
 
 </LinearLayout>
 
