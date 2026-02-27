@@ -17,7 +17,6 @@ class StateDescriptionsView @JvmOverloads constructor(
 ) : FrameLayout(context, attrs, defStyle) {
 
     private lateinit var soundModeButton: Button
-    private lateinit var soundModeEmoji: TextView
     private var soundMode: SoundMode = SoundMode.SOUND
 
     init {
@@ -27,7 +26,6 @@ class StateDescriptionsView @JvmOverloads constructor(
 
     private fun setupThreeStateButton() {
         soundModeButton = findViewById(R.id.sound_mode_button)
-        soundModeEmoji = findViewById(R.id.sound_mode_emoji)
         updateButtonState()
 
         soundModeButton.setOnClickListener {
@@ -59,8 +57,8 @@ class StateDescriptionsView @JvmOverloads constructor(
             }
         )
 
-        soundModeEmoji.text = emoji
-        soundModeButton.text = text
+        soundModeButton.contentDescription = text
+        soundModeButton.text = emoji
         ViewCompat.setStateDescription(soundModeButton, stateDesc)
 
         ViewCompat.replaceAccessibilityAction(

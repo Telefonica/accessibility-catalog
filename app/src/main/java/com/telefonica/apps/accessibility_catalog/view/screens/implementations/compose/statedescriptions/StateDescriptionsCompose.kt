@@ -1,9 +1,8 @@
 package com.telefonica.apps.accessibility_catalog.view.screens.implementations.compose.statedescriptions
 
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
@@ -16,6 +15,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.invisibleToUser
 import androidx.compose.ui.semantics.onClick
 import androidx.compose.ui.semantics.semantics
@@ -35,7 +35,7 @@ fun StateDescriptions() {
 }
 
 @Composable
-private fun ExampleWithThreeStateButton() {
+private fun ColumnScope.ExampleWithThreeStateButton() {
     Title(
         style = TitleStyle.TITLE_1,
         text = stringResource(R.string.state_descriptions_implementation_three_state_button_title),
@@ -65,11 +65,18 @@ private fun ExampleWithThreeStateButton() {
 
     Spacer(modifier = Modifier.height(8.dp))
 
-    Row(
+
+    Button(
+        onClick = {
+            soundMode = soundMode.nextMode()
+        },
         modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 8.dp),
-        verticalAlignment = Alignment.CenterVertically
+            .align(Alignment.CenterHorizontally)
+            .semantics {
+                stateDescription = stateDesc
+                contentDescription = text
+                onClick(label = changeAction, action = null)
+            }
     ) {
         Text(
             text = emoji,
@@ -80,23 +87,6 @@ private fun ExampleWithThreeStateButton() {
                     invisibleToUser()
                 }
         )
-
-        Button(
-            onClick = {
-                soundMode = soundMode.nextMode()
-            },
-            modifier = Modifier
-                .weight(1f)
-                .semantics {
-                    stateDescription = stateDesc
-                    onClick(label = changeAction, action = null)
-                }
-        ) {
-            Text(
-                text = text,
-                fontSize = 18.sp
-            )
-        }
     }
 }
 
