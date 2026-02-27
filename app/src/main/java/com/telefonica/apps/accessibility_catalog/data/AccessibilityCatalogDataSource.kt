@@ -192,7 +192,7 @@ class AccessibilityCatalogDataSource @Inject constructor() {
                 R.string.state_descriptions_requirment_1,
                 R.string.state_descriptions_requirment_2,
                 R.string.state_descriptions_requirment_3,
-            ), // TODO
+            ),
             relatedLinksResId = listOf(), // TODO
             xmlViewImplementation = {
                 AndroidViewImplementation(
