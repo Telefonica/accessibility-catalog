@@ -188,7 +188,11 @@ class AccessibilityCatalogDataSource @Inject constructor() {
             nameResId = R.string.state_descriptions_title_section,
             iconResId = R.drawable.ic_content_description, // TODO
             abstractResId = R.string.state_descriptions_abstract,
-            requirementsResId = listOf(), // TODO
+            requirementsResId = listOf(
+                R.string.state_descriptions_requirment_1,
+                R.string.state_descriptions_requirment_2,
+                R.string.state_descriptions_requirment_3,
+            ), // TODO
             relatedLinksResId = listOf(), // TODO
             xmlViewImplementation = {
                 AndroidViewImplementation(

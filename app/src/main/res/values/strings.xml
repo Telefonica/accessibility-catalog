@@ -143,4 +143,7 @@
     <string name="state_descriptions_implementation_change_to_silence">Cambiar a modo silencio</string>
     <string name="state_descriptions_implementation_change_to_sound">Cambiar a modo sonido</string>
     <string name="state_descriptions_implementation_alternate_action">alternar</string>
+    <string name="state_descriptions_requirment_1">Sobreescribe las descripciones de estado en elementos que utilizan cambios visuales para expresar actualizaciones de algún estado.</string>
+    <string name="state_descriptions_requirment_2">Por lo general, elementos comunes como Checkbox, Switch o RadioButton no requieren que el desarollador sobreescriba su descripción de estado ya que de serie lo manejan ellos mismos.</string>
+    <string name="state_descriptions_requirment_3">Esta propiead está pensada sobre todo para componentes custom donde por defecto el servicio de accesibilidad no sabe qué descripción de estado darle.</string>
 </resources>
