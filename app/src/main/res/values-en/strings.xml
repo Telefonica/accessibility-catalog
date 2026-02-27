@@ -140,4 +140,6 @@
     <string name="state_descriptions_requirment_1">Override state descriptions on elements that use visual changes to express state updates.</string>
     <string name="state_descriptions_requirment_2">Generally, common elements like Checkbox, Switch, or RadioButton do not require the developer to override their state description as they handle it themselves by default.</string>
     <string name="state_descriptions_requirment_3">This property is primarily intended for custom components where the accessibility service does not know by default what state description to provide.</string>
+    <string name="state_descriptions_link_label_1">Android XML documentation</string>
+    <string name="state_descriptions_link_label_2">Android Compose documentation</string>
 </resources>
