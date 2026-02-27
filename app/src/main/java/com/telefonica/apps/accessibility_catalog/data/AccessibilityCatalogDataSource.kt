@@ -208,13 +208,13 @@ class AccessibilityCatalogDataSource @Inject constructor() {
                     factory = { context ->
                         StateDescriptionsView(context)
                     },
-                    documentationUrl = R.string.state_descriptions_implementation_xml_documentation_url,
+                    documentationUrl = R.string.state_descriptions_implementation_xml_documentation_url, // TODO
                 )
             },
             composeImplementation = {
                 ComposeImplementation(
                     composable = { StateDescriptions() },
-                    documentationUrl = R.string.state_descriptions_implementation_compose_documentation_url,
+                    documentationUrl = R.string.state_descriptions_implementation_compose_documentation_url, // TODO
                 )
             }
         )
