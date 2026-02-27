@@ -13,6 +13,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.invisibleToUser
@@ -60,33 +61,41 @@ private fun ExampleWithThreeStateButton() {
         SoundMode.SILENCE -> stringResource(R.string.state_descriptions_implementation_change_to_sound)
     }
 
-    val changeAction = stringResource(R.string.state_descriptions_implementation_change_action)
+    val changeAction = stringResource(R.string.state_descriptions_implementation_alternate_action)
 
     Spacer(modifier = Modifier.height(8.dp))
 
-    Button(
-        onClick = {
-            soundMode = soundMode.nextMode()
-        },
+    Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 8.dp)
-            .semantics {
-                stateDescription = stateDesc
-                onClick(label = changeAction, action = null)
-            }
+            .padding(horizontal = 16.dp, vertical = 8.dp),
+        verticalAlignment = Alignment.CenterVertically
     ) {
-        Row {
+        Text(
+            text = emoji,
+            fontSize = 18.sp,
+            modifier = Modifier
+                .padding(end = 8.dp)
+                .semantics {
+                    invisibleToUser()
+                }
+        )
+
+        Button(
+            onClick = {
+                soundMode = soundMode.nextMode()
+            },
+            modifier = Modifier
+                .weight(1f)
+                .semantics {
+                    stateDescription = stateDesc
+                    onClick(label = changeAction, action = null)
+                }
+        ) {
             Text(
-                text = emoji,
-                fontSize = 18.sp,
-                modifier = Modifier
-                    .padding(end = 8.dp)
-                    .semantics {
-                        invisibleToUser()
-                    }
+                text = text,
+                fontSize = 18.sp
             )
-            Text(text = text, fontSize = 18.sp)
         }
     }
 }

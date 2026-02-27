@@ -135,13 +135,12 @@
     <!-- State descriptions -->
     <string name="state_descriptions_title_section">Descripciones de estado</string>
     <string name="state_descriptions_abstract">Las descripciones de estado son textos adicionales que proporcionan información sobre el estado actual de un elemento interactivo, como un interruptor o una casilla de verificación.</string>
-    <string name="state_descriptions_example_title">Ejemplo con botón de tres estados</string>
-    <string name="state_descriptions_implementation_three_state_button_title">Example with three-state button</string>
+    <string name="state_descriptions_implementation_three_state_button_title">Ejemplo con botón de tres estados</string>
     <string name="state_descriptions_implementation_sound_mode_enabled">Modo sonido activado</string>
     <string name="state_descriptions_implementation_vibration_mode_enabled">Modo vibración activado</string>
     <string name="state_descriptions_implementation_silence_mode_enabled">Modo silencio activado</string>
     <string name="state_descriptions_implementation_change_to_vibration">Cambiar a modo vibración</string>
     <string name="state_descriptions_implementation_change_to_silence">Cambiar a modo silencio</string>
     <string name="state_descriptions_implementation_change_to_sound">Cambiar a modo sonido</string>
-    <string name="state_descriptions_implementation_change_action">alternar</string>
+    <string name="state_descriptions_implementation_alternate_action">alternar</string>
 </resources>
