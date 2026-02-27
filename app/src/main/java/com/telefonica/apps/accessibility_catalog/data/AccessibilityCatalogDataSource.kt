@@ -186,7 +186,7 @@ class AccessibilityCatalogDataSource @Inject constructor() {
         AccessibilityElement(
             id = UUID.randomUUID(),
             nameResId = R.string.state_descriptions_title_section,
-            iconResId = R.drawable.ic_content_description, // TODO
+            iconResId = R.drawable.ic_state_descriptions,
             abstractResId = R.string.state_descriptions_abstract,
             requirementsResId = listOf(
                 R.string.state_descriptions_requirment_1,
