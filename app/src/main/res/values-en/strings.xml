@@ -125,4 +125,17 @@
     <string name="content_descriptions_phone_number_correct_explanation">The screen reader will read the number digit by digit.</string>
     <string name="content_descriptions_phone_number_raw">656787434</string>
     <string name="content_descriptions_phone_number_spaced">6 5 6 7 8 7 4 3 4</string>
+
+    <!-- State descriptions -->
+    <string name="state_descriptions_title_section">State Descriptions</string>
+    <string name="state_descriptions_abstract">State descriptions are additional texts that provide information about the current state of an interactive element, such as a switch or a checkbox.</string>
+    <string name="state_descriptions_example_title">Example with three state button</string>
+    <string name="state_descriptions_implementation_three_state_button_title">Example with three-state button</string>
+    <string name="state_descriptions_implementation_sound_mode_enabled">Sound mode enabled</string>
+    <string name="state_descriptions_implementation_vibration_mode_enabled">Vibration mode enabled</string>
+    <string name="state_descriptions_implementation_silence_mode_enabled">Silent mode enabled</string>
+    <string name="state_descriptions_implementation_change_to_vibration">Change to vibration mode</string>
+    <string name="state_descriptions_implementation_change_to_silence">Change to silent mode</string>
+    <string name="state_descriptions_implementation_change_to_sound">Change to sound mode</string>
+    <string name="state_descriptions_implementation_change_action">alternate</string>
 </resources>
