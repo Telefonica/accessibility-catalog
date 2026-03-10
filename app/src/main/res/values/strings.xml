@@ -131,4 +131,21 @@
     <string name="content_descriptions_phone_number_correct_explanation">El lector de pantalla leerá el número dígito por dígito.</string>
     <string name="content_descriptions_phone_number_raw">656787434</string>
     <string name="content_descriptions_phone_number_spaced">6 5 6 7 8 7 4 3 4</string>
+
+    <!-- State descriptions -->
+    <string name="state_descriptions_title_section">Descripciones de estado</string>
+    <string name="state_descriptions_abstract">Las descripciones de estado son textos adicionales que proporcionan información sobre el estado actual de un elemento interactivo, como un interruptor o una casilla de verificación.</string>
+    <string name="state_descriptions_implementation_three_state_button_title">Ejemplo con botón de tres estados</string>
+    <string name="state_descriptions_implementation_sound_mode_enabled">Modo sonido activado</string>
+    <string name="state_descriptions_implementation_vibration_mode_enabled">Modo vibración activado</string>
+    <string name="state_descriptions_implementation_silence_mode_enabled">Modo silencio activado</string>
+    <string name="state_descriptions_implementation_change_to_vibration">Cambiar a modo vibración</string>
+    <string name="state_descriptions_implementation_change_to_silence">Cambiar a modo silencio</string>
+    <string name="state_descriptions_implementation_change_to_sound">Cambiar a modo sonido</string>
+    <string name="state_descriptions_implementation_alternate_action">alternar</string>
+    <string name="state_descriptions_requirement_1">Sobreescribe las descripciones de estado en elementos que utilizan cambios visuales para expresar actualizaciones de algún estado.</string>
+    <string name="state_descriptions_requirement_2">Por lo general, elementos comunes como Checkbox, Switch o RadioButton no requieren que el desarrollador sobreescriba su descripción de estado ya que de serie lo manejan ellos mismos.</string>
+    <string name="state_descriptions_requirement_3">Esta propiedad está pensada sobre todo para componentes custom donde por defecto el servicio de accesibilidad no sabe qué descripción de estado darle.</string>
+    <string name="state_descriptions_link_label_1">Documentación de Android para XML</string>
+    <string name="state_descriptions_link_label_2">Documentación de Android para Compose</string>
 </resources>

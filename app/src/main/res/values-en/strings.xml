@@ -125,4 +125,21 @@
     <string name="content_descriptions_phone_number_correct_explanation">The screen reader will read the number digit by digit.</string>
     <string name="content_descriptions_phone_number_raw">656787434</string>
     <string name="content_descriptions_phone_number_spaced">6 5 6 7 8 7 4 3 4</string>
+
+    <!-- State descriptions -->
+    <string name="state_descriptions_title_section">State Descriptions</string>
+    <string name="state_descriptions_abstract">State descriptions are additional texts that provide information about the current state of an interactive element, such as a switch or a checkbox.</string>
+    <string name="state_descriptions_implementation_three_state_button_title">Example with three-state button</string>
+    <string name="state_descriptions_implementation_sound_mode_enabled">Sound mode enabled</string>
+    <string name="state_descriptions_implementation_vibration_mode_enabled">Vibration mode enabled</string>
+    <string name="state_descriptions_implementation_silence_mode_enabled">Silent mode enabled</string>
+    <string name="state_descriptions_implementation_change_to_vibration">Change to vibration mode</string>
+    <string name="state_descriptions_implementation_change_to_silence">Change to silent mode</string>
+    <string name="state_descriptions_implementation_change_to_sound">Change to sound mode</string>
+    <string name="state_descriptions_implementation_alternate_action">alternate</string>
+    <string name="state_descriptions_requirement_1">Override state descriptions on elements that use visual changes to express state updates.</string>
+    <string name="state_descriptions_requirement_2">Generally, common elements like Checkbox, Switch, or RadioButton do not require the developer to override their state description as they handle it themselves by default.</string>
+    <string name="state_descriptions_requirement_3">This property is primarily intended for custom components where the accessibility service does not know by default what state description to provide.</string>
+    <string name="state_descriptions_link_label_1">Android XML documentation</string>
+    <string name="state_descriptions_link_label_2">Android Compose documentation</string>
 </resources>

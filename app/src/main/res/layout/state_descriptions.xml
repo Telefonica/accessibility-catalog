@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.telefonica.mistica.title.TitleView
+        android:id="@+id/three_state_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/state_descriptions_implementation_three_state_button_title"
+        app:titleStyle="title1"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <ImageButton
+        android:id="@+id/sound_mode_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        tools:src="@drawable/ic_volume_active" />
+
+</LinearLayout>
+

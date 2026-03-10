@@ -7,10 +7,12 @@ import com.telefonica.apps.accessibility_catalog.view.screens.common.AndroidView
 import com.telefonica.apps.accessibility_catalog.view.screens.common.ComposeImplementation
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.compose.contentdescriptions.ContentDescriptionsCompose
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.compose.headings.Headings
+import com.telefonica.apps.accessibility_catalog.view.screens.implementations.compose.statedescriptions.StateDescriptions
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.compose.toggleables.ToggleablesCompose
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.compose.touchtarget.TouchTarget
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.contentdescriptions.ContentDescriptionsView
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.headings.HeadingsView
+import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.statedescriptions.StateDescriptionsView
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.toggleables.ToggleablesView
 import com.telefonica.apps.accessibility_catalog.view.screens.implementations.views.touchtarget.TouchTargetView
 import java.util.UUID
@@ -177,6 +179,44 @@ class AccessibilityCatalogDataSource @Inject constructor() {
                     documentationUrl = R.string.content_descriptions_implementation_compose_documentation_url
                 )
             },
+        ),
+        //endregion
+
+        //region State Descriptions
+        AccessibilityElement(
+            id = UUID.randomUUID(),
+            nameResId = R.string.state_descriptions_title_section,
+            iconResId = R.drawable.ic_state_descriptions,
+            abstractResId = R.string.state_descriptions_abstract,
+            requirementsResId = listOf(
+                R.string.state_descriptions_requirement_1,
+                R.string.state_descriptions_requirement_2,
+                R.string.state_descriptions_requirement_3,
+            ),
+            relatedLinksResId = listOf(
+                TextLink(
+                    url = R.string.state_descriptions_related_link_1,
+                    nameResId = R.string.state_descriptions_link_label_1
+                ),
+                TextLink(
+                    url = R.string.state_descriptions_related_link_2,
+                    nameResId = R.string.state_descriptions_link_label_2
+                ),
+            ),
+            xmlViewImplementation = {
+                AndroidViewImplementation(
+                    factory = { context ->
+                        StateDescriptionsView(context)
+                    },
+                    documentationUrl = R.string.state_descriptions_implementation_xml_documentation_url,
+                )
+            },
+            composeImplementation = {
+                ComposeImplementation(
+                    composable = { StateDescriptions() },
+                    documentationUrl = R.string.state_descriptions_implementation_compose_documentation_url,
+                )
+            }
         ),
         //endregion
     )
