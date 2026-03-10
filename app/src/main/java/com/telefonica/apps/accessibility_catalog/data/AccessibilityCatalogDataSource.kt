@@ -189,9 +189,9 @@ class AccessibilityCatalogDataSource @Inject constructor() {
             iconResId = R.drawable.ic_state_descriptions,
             abstractResId = R.string.state_descriptions_abstract,
             requirementsResId = listOf(
-                R.string.state_descriptions_requirment_1,
-                R.string.state_descriptions_requirment_2,
-                R.string.state_descriptions_requirment_3,
+                R.string.state_descriptions_requirement_1,
+                R.string.state_descriptions_requirement_2,
+                R.string.state_descriptions_requirement_3,
             ),
             relatedLinksResId = listOf(
                 TextLink(
@@ -217,9 +217,9 @@ class AccessibilityCatalogDataSource @Inject constructor() {
                     documentationUrl = R.string.state_descriptions_implementation_compose_documentation_url,
                 )
             }
-        )
+        ),
+        //endregion
     )
-    //endregion
 
     fun getElements() = accessibilityElements
 }
