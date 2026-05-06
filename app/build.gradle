@@ -1,19 +1,18 @@
 plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt'
-    id 'com.google.dagger.hilt.android'
+    alias(libs.plugins.android.app)
+    alias(libs.plugins.hilt.android)
+    alias(libs.plugins.ksp)
     alias(libs.plugins.compose.compiler)
 }
 
 android {
     namespace 'com.telefonica.apps.accessibility_catalog'
-    compileSdk 35
+    compileSdk 36
 
     defaultConfig {
         applicationId "com.telefonica.apps.accessibility_catalog"
         minSdk 24
-        targetSdk 35
+        targetSdk 36
         versionCode 1
         versionName "1.0"
 
@@ -32,9 +31,6 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
     }
     buildFeatures {
         compose true
@@ -69,12 +65,7 @@ dependencies {
     debugImplementation libs.androidx.ui.test.manifest
 
     implementation libs.dagger
-    kapt libs.dagger.compiler
+    ksp libs.dagger.compiler
 
-    kapt libs.hilt.compiler
-}
-
-// Allow references to generated code
-kapt {
-    correctErrorTypes true
+    ksp libs.hilt.compiler
 }
